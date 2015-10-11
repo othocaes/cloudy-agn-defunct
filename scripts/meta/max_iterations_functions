@@ -1,0 +1,30 @@
+date;qstat|grep xaw;echo "`grep 'stopped' ../grid_25dex_18_15_15_cldn23/*.out|wc -l`/841 complete"
+
+num=0; for file in `grep -l '40 of 40' [0-9]*_[0-9]*|cut -d: -f1`; do echo $(( ++num )) -  $file; grep "40 of 40" $file|tail -n1|cut -d'.' -f4; grep "HDEN=" $file|head -n1|sed 's#\*##g'|sed 's#^\s*# #'; grep "phi(h)" $file|head -n1|sed s#\*##g|sed 's#^\s*# #';egrep "C-" $file; echo; done > max_iterations_report.txt; less max_iterations_report.txt
+
+ls -l grid*|grep "Jun  9 21"
+
+tail -n3 *540*.out|grep iter|less
+
+
+Make joke about this:
+
+#He I Lines:
+TOTL 1.08299m
+He 1 1.08291m
+Inwd 1.08291m
+He 1 1.08303m
+Inwd 1.08303m
+He 1 1.08303m
+Inwd 1.08303m
+
+
+
+
+
+num=0; for file in `grep -l '40 of 40' gridoutput/[0-9]*_[0-9]*|cut -d: -f1`; do echo $(( ++num )) -  $file; grep "40 of 40" $file|tail -n1|cut -d'.' -f4; grep "HDEN=" $file|head -n1|sed 's#\*##g'|sed 's#^\s*# #'; grep "phi(h)" $file|head -n1|sed s#\*##g|sed 's#^\s*# #';egrep "C-" $file; echo; done > max_iterations_report.txt; less max_iterations_report.txt
+
+num=0; for file in `grep -l '50 of 50' gridoutput/[0-9]*_[0-9]*|cut -d: -f1`; do echo $(( ++num )) -  $file; grep "50 of 50" $file|tail -n1|cut -d'.' -f4; grep "HDEN=" $file|head -n1|sed 's#\*##g'|sed 's#^\s*# #'; grep "phi(h)" $file|head -n1|sed s#\*##g|sed 's#^\s*# #';egrep "C-" $file; echo; done > max_iterations_report.txt; less max_iterations_report.txt
+
+
+num=0; for file in `grep -l '10 of 10' gridoutput/[0-9]*_[0-9]*|cut -d: -f1`; do echo $(( ++num )) -  $file; grep "10 of 10" $file|tail -n1|cut -d'.' -f4; grep "HDEN=" $file|head -n1|sed 's#\*##g'|sed 's#^\s*# #'; grep "phi(h)" $file|head -n1|sed s#\*##g|sed 's#^\s*# #';egrep "C-" $file; echo; done > max_iterations_report.txt; less max_iterations_report.txt
