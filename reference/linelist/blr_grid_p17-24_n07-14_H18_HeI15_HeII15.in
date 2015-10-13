@@ -1,0 +1,26 @@
+table agn
+phi(h) 17.000 vary
+grid from 17.0 to 24.0 in 1.00 dex steps
+hden 7.000 vary
+grid from 7.0 to 14.0 in 1.00 dex steps
+normalize to "inci" 1215 scale factor = 1215
+C
+atom H-like element hydrogen levels resolved 18
+atom He-like element helium levels resolved 15
+atom H-like element helium levels resolved 15
+set nend 5000
+stop column density 23
+iterate to convergence
+C
+print short
+print line faint 1
+punch overview "blr_grid_p17-24_n07-14_H18_HeI15_HeII15.ovr" last
+punch grid "blr_grid_p17-24_n07-14_H18_HeI15_HeII15.gri" last
+C punch continuum "blr_grid_p17-24_n07-14_H18_HeI15_HeII15.con" units angstroms last
+C
+punch linelist "blr_grid_p17-24_n07-14_H18_HeI15_HeII15.llh" "LineList_H_short.dat" last
+punch linelist "blr_grid_p17-24_n07-14_H18_HeI15_HeII15.llbuv" "LineList_BLR_uv.dat" last
+punch linelist "blr_grid_p17-24_n07-14_H18_HeI15_HeII15.llbonir" "LineList_BLR_onir.dat" last
+punch linelist "blr_grid_p17-24_n07-14_H18_HeI15_HeII15.llbhe2" "LineList_HeII.dat" last
+punch linelist "blr_grid_p17-24_n07-14_H18_HeI15_HeII15.llhe1" "LineList_HeI.dat" last
+

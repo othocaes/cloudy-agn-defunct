@@ -1,0 +1,31 @@
+he 2  3203     total He II Paschen-beta line
+BA C     0     total of integrated H balmer continuum
+BaC   3646     total nuFnu of Balmer jump at 3646 (the head)
+He 1  3889     total H-6 (H-Balmer)
+ca2k  3934     total Ca II 3934 emission
+ca2h  3969     total Ca II 3969 emission
+h  1  4102     total H-delta
+h  1  4340     total H-gamma
+ca b  4471     total He I 4471, case B approximation
+he 2  4686     total He II 4686 (Paschen-alpha)
+inwd  4686     inward flux of He II 4686
+totl  4861     total H-beta 4861
+inwd  4861     inward flux of H-beta 4861
+He 1  5876     total He I 5876
+na 1  5892     total Na ID 5892
+h  1  6563     total H-alpha 6563
+# near IR emission lines and continua
+k  1  7676     total K I 7745
+6lev  8446     total O I 8446	#17
+ca2x  8498     total Ca II 8498
+ca2y  8542     total Ca II 8542
+ca2z  8662     total Ca II 8662
+PA C     0     total of integrated H Paschen continuum
+totl 10830     total He I 10,830A, all three lines within multiplet
+o  1	1.130m     the O I line #added by dre #23
+h  1   1.875m    total H Paschen-alpha
+#
+# The following 11 "lines" represent emission by a "6-level" Fe II atom
+# of Hamann & Ferland, a modification of the Wills, Netzer, and Wills.
+# See HAZY for some details.
+

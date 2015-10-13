@@ -1,0 +1,101 @@
+#
+# hydrogen Lyman series
+h  1  1216     total Lyman-alpha 1216
+h  1  1026     total Lyman-beta 1025
+H  1 972.5
+H  1 949.7
+H  1 937.8
+H  1 930.8
+H  1 926.2
+H  1 923.2
+H  1 921.0
+#H  1 919.4
+#H  1 918.1
+#H  1 917.2
+#H  1 916.4
+#H  1 915.8
+#H  1 915.3
+#H  1 914.9
+#H  1 914.6
+#H  1 914.3
+#H  1 914.0
+#H  1 913.8
+#H  1 913.6
+#H  1 913.5
+#H  1 913.3
+#
+#
+# hydrogen Balmer series
+# 
+h  1  6563     total H-alpha 6563
+h  1  4861     total H-beta
+h  1  4340     total H-gamma
+h  1  4102     total H-delta
+h  1  3970     total H-epsilon
+h  1  3889     total H-8 (H-Balmer)
+h  1  3835     total H-9 (H-Balmer)
+H  1  3798
+##H  1  3771
+#H  1  3750
+#H  1  3734
+#H  1  3722
+#H  1  3712
+#H  1  3704
+#H  1  3697
+#H  1  3692
+#H  1  3687
+#H  1  3683
+#H  1  3679
+#H  1  3676
+#H  1  3674
+#H  1  3671
+#
+#
+# hydrogen Paschen series
+#
+h  1     1.875m     total H Paschen-alpha
+H  1     1.282m			total H Paschen-beta
+H  1     1.094m			total H Paschen-gamma
+H  1     1.005m			total H Paschen-delta
+H  1     0.9546m		total H Paschen-8
+H  1     0.9229m		total H Paschen-9
+H  1     0.9015m		total H Paschen-10
+#H  1     0.8863m		total H Paschen-11
+#H  1			8750 
+#H  1			8665 
+#H  1			8598 
+#H  1			8545 
+#H  1			8502 
+#H  1			8467 
+#H  1			8438 
+#H  1			8413 
+#H  1			8392 
+#H  1			8374 
+#H  1			8359 
+#H  1			8346 
+#H  1			8334 
+#
+#
+# Brackett series
+#
+H  1     4.051m  Brackett-alpha
+H  1     2.625m  Brackett-beta
+H  1     2.166m  Brackett-gamma
+H  1     1.945m  Brackett-delta
+H  1		 1.817m  Brackett-epsilon
+H  1		 1.736m  Brackett 10
+#H  1		 1.681m  Brackett 11
+#H  1		 1.641m  Brackett 12
+#H  1		 1.611m  Brackett 13  
+#H  1		 1.588m 
+#H  1		 1.570m 
+#H  1		 1.556m 
+#H  1		 1.544m 
+#H  1		 1.534m 
+#H  1		 1.526m 
+#H  1		 1.519m 
+#H  1		 1.513m 
+#H  1		 1.508m 
+#H  1		 1.504m 
+#H  1		 1.500m 
+#

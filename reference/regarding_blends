@@ -1,0 +1,71 @@
+Hi Dr. Korista,
+
+This regards the multiplets about which we currently obtain information from Cloudy, indexed by TOTL. Specifically, the new way these are treated in Cloudy 15.
+
+It appears C15 adds a new category of emission lines after "molecules" called "blends". It seems this has largely replaced the TOTL lines we are used to seeing, but there are some exceptions. For example, there is no longer any TOTL line around N III 1750. Here is the readout:
+
+ Inwd      860.205A    4.359    0.0033
+ N  3      1748.65A    6.367    0.3378
+ Inwd      1748.65A    6.150    0.2047
+ N  3      1753.99A    6.381    0.3489
+ Inwd      1753.99A    6.165    0.2118
+ N  3      1746.82A    5.099    0.0182
+ Inwd      1746.82A    4.866    0.0107
+ N  3      1752.16A    5.935    0.1250
+ Inwd      1752.16A    5.709    0.0742
+ N  3      1749.67A    6.719    0.7598
+ Inwd      1749.67A    6.519    0.4794
+ N  3      989.799A    6.761    0.8374
+
+Instead, presumably, there is a blend line near the relevant wavelength. listed in the blends section. Blended regions can also be accompanied by an inward component. For the N III example I found
+
+Blnd      1750.00A    7.040    1.5897
+
+In the blends section, Cloudy also outputs lines with more specific labels, often alongside similarly-located blends. For example:
+
+Blnd      1657.00A    6.418    0.3794
+C 1R      1656.00A    6.361    0.3329
+Blnd      2326.00A    5.748    0.0811
+Blnd      1335.00A    7.737    7.9093
+C 2R      1335.00A    7.690    7.1108
+C 2P      3920.00A    4.311    0.0030
+Blnd      6580.00A    5.257    0.0262
+
+My guess is these are physically-modelled multiplets displayed alongside some sort of continuum blending. I read in the "A Multiplet Table of Astrophysical Interest" about a certain type of blending, but the document is huge and I didn't delve far into it; besides, this could be another type of blend altogether, given what I know.
+
+So, I'm not sure how we might make sense of a blend line alongside the thought of the TOTL in C13 (which is that the TOTL should represent the sum of the multiplet values). In the N III example, the sum of the quintuplet's values does match the blend value. For C I, however, it does not.
+
+ C  1      1656.27A    5.388    0.0354
+ Inwd      1656.27A    5.380    0.0348
+ C  1      1656.93A    5.390    0.0356
+ Inwd      1656.93A    5.374    0.0343
+ C  1      1657.01A    5.506    0.0465
+ Inwd      1657.01A    5.520    0.0480
+ C  1      1657.38A    5.354    0.0327
+ Inwd      1657.38A    5.329    0.0310
+ C  1      1657.91A    5.390    0.0356
+ Inwd      1657.91A    5.374    0.0343
+ C  1      1658.12A    5.417    0.0379
+ Inwd      1658.12A    5.406    0.0369
+
+ (Sum = .2237)
+
+ Blnd      1657.00A    6.418    0.3794
+ C 1R      1656.00A    6.361    0.3329
+
+
+The only places I found where TOTL lines still exist are in the general properties (i.e. TOTL 4861) and the He-like iso-sequence. For example,
+
+ TOTL      29.0840A    6.811    0.9375
+ N  6      29.0840A    6.309    0.2957
+ Inwd      29.0840A    6.528    0.4886
+ N  6      29.0815A    3.848    0.0010
+ Inwd      29.0815A    4.062    0.0017
+ N  6      28.7870A    5.941    0.1266
+ Inwd      28.7870A    6.062    0.1672
+
+
+This example does not sum properly, either. So, I really have no idea what's going on, here. But, as we mostly decided before, it shouldn't matter much for our current purposes.
+
+Best Regards,
+Otho Ulrich

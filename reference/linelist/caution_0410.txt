@@ -1,0 +1,214 @@
+710044: C-This is the last iteration and H  1 Ly(a) optical depth changed by     84% (was 1.19e+07). Try another iteration.
+710045-  !Charge transfer ionization of H reached 99.4% of the local H ionization rate.
+710046-  !Photoionization of upper level of Mg II 2798 reached 100.0% of the total Mg+ photo rate.
+710047-  !Photoionization of upper levels of [O I] reached 15.1% of the total O destruction rate.
+710048-  !Photoionization of upper levels of [O III] reached 12.8% of the total O++ photo rate.
+710049-  !The largest plasma frequency was 2.46e-07 Ryd = 3.70e+05 micron  The continuum is set to 0 below this.
+710050-  !The largest continuum brightness temperature was 5.165e+03K at 9.109e-03 Ryd.
+710051-  !AGE: Cloud age was not set.  Longest timescale was 2.00e+03 s.
+710052-  !The excitation temp of Lya exceeded the electron temp, largest value was 1.81e+04K (gas temp there was 1.38e+04K, zone 141)
+710053-  !Some iso-structure lines mased: He-like HELI, line 12-11 had optical depth -1.60e+00
+710054-  !Some iso-structure lines mased: He-like HELI, line 20-17 had optical depth -8.03e-01
+710055-  !Some iso-structure lines mased: He-like HELI, line 29-27 had optical depth -1.29e+00
+710056-  !Some iso-structure lines mased: He-like HELI, line 30-25 had optical depth -7.92e-01
+710057-  !Some iso-structure lines mased: He-like HELI, line 39-37 had optical depth -4.13e-01
+710058-  !Some iso-structure lines mased: He-like HELI, line 41-39 had optical depth -2.04e-01
+710059-  !Some iso-structure lines mased: He-like HELI, line 42-35 had optical depth -4.19e-01
+710060-  !Some iso-structure lines mased: He-like HELI, line 51-49 had optical depth -1.32e-01
+710061-  !Some iso-structure lines mased: He-like HELI, line 56-47 had optical depth -2.21e-01
+710062-  !Some iso-structure lines mased: He-like HELI, line 72-61 had optical depth -1.27e-01
+710063-  !The CMB was not included.  This is added with the CMB command.
+710064-  !The ratio of radiation to gas pressure reached 7.95e-01 at zone 135.  Caused by Lyman alpha.
+710065-  !The radiation pressure jumped by 224% at zone 140, from 8.67e-02 to 2.47e-02 to 2.37e-02
+710066-   Charge transfer heating reached 2.98% of the local heating.
+710067-   The largest continuum occupation number was 7.075e+02 at 2.341e-07 Ryd.
+710068-   Photoionization of Ca+ 2D level by Ly-alpha reached   87.3% of the total rate out.
+710069-   G-bar cooling lines reached 1.18% of the local cooling.  Line=Mn 2 2589A
+710070-   Line absorption heating reached 1.65% of the local heating.
+710071-   Bound Compton heating reached 2.80% of the local heating.
+710072-   Rate of induced H 2-photon emission reached 1.02e-01 s^-1
+710073-   Induced recombination was  85.5% of the total for H level170
+710074-   Stimulated emission was  99.5% of the total for H transition171 -170
+710075-   Timescale-photoerosion of Fe=4.94e+06 yr
+710076-   The Balmer continuum optical depth was 1.26e-01.
+710077-   The Balmer continuum stimulated emission correction to optical depths reached 1.41e-01.
+710078-   The continuum optical depth at the lowest energy considered (1.055e-08 Ryd) was 4.569e+10.
+710079-   The optical depth to electron scattering is 0.074
+710080-
+710081-                       *********************************> Cloudy 08.00 <**********************************
+710082-                       * table agn                                                                       *
+710083-                       * phi(h) 19.750000 range 0.999466 7354000.000000                                  *
+710084-                       * grid from 19.0 to 19.75 in 0.25 dex steps                                       *
+710085-                       * HDEN=9.750000                                                                   *
+--
+919519: C-This is the last iteration and H  1 Ly(a) optical depth changed by     98% (was 5.72e+06). Try another iteration.
+919520-  !Photoionization of upper level of Mg II 2798 reached 10.6% of the total Mg+ photo rate.
+919521-  !Photoionization of upper levels of [O III] reached 12.4% of the total O++ photo rate.
+919522-  !The largest plasma frequency was 7.78e-07 Ryd = 1.17e+05 micron  The continuum is set to 0 below this.
+919523-  !The largest continuum brightness temperature was 2.904e+04K at 9.109e-03 Ryd.
+919524-  !AGE: Cloud age was not set.  Longest timescale was 1.61e+02 s.
+919525-  !The excitation temp of Lya exceeded the electron temp, largest value was 2.38e+04K (gas temp there was 1.32e+04K, zone 154)
+919526-  !Some iso-structure lines mased: He-like HELI, line 20-17 had optical depth -3.44e-01
+919527-  !Some iso-structure lines mased: He-like HELI, line 30-25 had optical depth -8.74e-01
+919528-  !Some iso-structure lines mased: He-like HELI, line 42-35 had optical depth -5.27e-01
+919529-  !Some iso-structure lines mased: He-like HELI, line 56-47 had optical depth -3.03e-01
+919530-  !Some iso-structure lines mased: He-like HELI, line 72-61 had optical depth -1.57e-01
+919531-  !The CMB was not included.  This is added with the CMB command.
+919532-  !The ratio of radiation to gas pressure reached 6.42e-01 at zone 157.  Caused by Lyman alpha.
+919533-  !The radiation pressure jumped by 290% at zone 162, from 3.20e-01 to 6.58e-02 to 6.17e-02
+919534-   Continuum fluorescent production of H-beta was significant.
+919535-   Photoionization of upper levels of [O I] reached 4.3% of the total O destruction rate.
+919536-   The largest continuum occupation number was 2.295e+03 at 7.032e-07 Ryd.
+919537-   The continuum brightness temperature fell below 10,000K at 6.985e+00 microns.
+919538-   Photoionization of Ca+ 2D level by Ly-alpha reached   70.3% of the total rate out.
+919539-   Line absorption heating reached 1.99% of the local heating.
+919540-   Rate of induced H 2-photon emission reached 5.45e-01 s^-1
+919541-   Induced recombination was  97.1% of the total for H level170
+919542-   Stimulated emission was  99.9% of the total for H transition171 -170
+919543-   Timescale-photoerosion of Fe=8.78e+05 yr
+919544-   Induced recombination cooling was 1.5% of the total.
+919545-   Free-free heating was 6.1% of the total.
+919546-   The Balmer continuum optical depth was 3.39e-01.
+919547-   The Balmer continuum stimulated emission correction to optical depths reached 1.52e-01.
+919548-   The continuum optical depth at the lowest energy considered (1.055e-08 Ryd) was 5.897e+11.
+919549-   The optical depth to electron scattering is 0.073
+919550-   Line radiation pressure capped by thermalization length.
+919551-
+919552-                       *********************************> Cloudy 08.00 <**********************************
+919553-                       * table agn                                                                       *
+919554-                       * phi(h) 20.500000 range 0.999466 7354000.000000                                  *
+919555-                       * grid from 20.0 to 20.75 in 0.25 dex steps                                       *
+919556-                       * HDEN=10.750000                                                                  *
+919557-                       * grid from 7.0 to 14.0 in 0.25 dex steps                                         *
+919558-                       * normalize to "inci" 1215 scale factor = 1215                                    *
+919559-                       * C                                                                               *
+919560-                       * atom H-like element hydrogen levels resolved 18                                 *
+--
+981567: C-This is the last iteration and C  6 Bal(a) optical depth changed by  20.6% (was 1.32e+00). Try another iteration.
+981568-  !Photoionization of upper levels of [O III] reached 12.9% of the total O++ photo rate.
+981569-  !The largest plasma frequency was 7.78e-07 Ryd = 1.17e+05 micron  The continuum is set to 0 below this.
+981570-  !The largest continuum brightness temperature was 5.165e+04K at 9.109e-03 Ryd.
+981571-  !AGE: Cloud age was not set.  Longest timescale was 1.49e+02 s.
+981572-  !The excitation temp of Lya exceeded the electron temp, largest value was 2.36e+04K (gas temp there was 1.49e+04K, zone 162)
+981573-  !Some iso-structure lines mased: He-like HELI, line 12-11 had optical depth -7.88e-01
+981574-  !Some iso-structure lines mased: He-like HELI, line 19-17 had optical depth -1.92e-01
+981575-  !Some iso-structure lines mased: He-like HELI, line 20-17 had optical depth -4.74e-01
+981576-  !Some iso-structure lines mased: He-like HELI, line 29-27 had optical depth -2.18e-01
+981577-  !Some iso-structure lines mased: He-like HELI, line 30-25 had optical depth -6.46e-01
+981578-  !Some iso-structure lines mased: He-like HELI, line 42-35 had optical depth -3.18e-01
+981579-  !Some iso-structure lines mased: He-like HELI, line 56-47 had optical depth -1.76e-01
+981580-  !The CMB was not included.  This is added with the CMB command.
+981581-  !The ratio of radiation to gas pressure reached 6.48e-01 at zone 165.  Caused by Lyman alpha.
+981582-  !The radiation pressure jumped by 174% at zone 3, from 6.81e-06 to 2.95e-05 to 9.61e-05
+981583-   Continuum fluorescent production of H-beta was significant.
+981584-   Photoionization of upper level of Mg II 2798 reached 2.5% of the total Mg+ photo rate.
+981585-   Photoionization of upper levels of [O I] reached 2.7% of the total O destruction rate.
+981586-   The largest continuum occupation number was 4.081e+03 at 7.032e-07 Ryd.
+981587-   The continuum brightness temperature fell below 10,000K at 5.777e+00 microns.
+981588-   Photoionization of Ca+ 2D level by Ly-alpha reached   76.5% of the total rate out.
+981589-   Line absorption heating reached 2.37% of the local heating.
+981590-   Rate of induced H 2-photon emission reached 9.68e-01 s^-1
+981591-   Induced recombination was  98.3% of the total for H level170
+981592-   Stimulated emission was  99.9% of the total for H transition171 -170
+981593-   Timescale-photoerosion of Fe=4.94e+05 yr
+981594-   Induced recombination cooling was 1.4% of the total.
+981595-   Free-free heating was 6.3% of the total.
+981596-   The Balmer continuum optical depth was 1.36e-01.
+981597-   The Balmer continuum stimulated emission correction to optical depths reached 1.48e-01.
+981598-   The continuum optical depth at the lowest energy considered (1.055e-08 Ryd) was 4.269e+11.
+981599-   The optical depth to electron scattering is 0.074
+981600-   Line radiation pressure capped by thermalization length.
+981601-
+981602-                       *********************************> Cloudy 08.00 <**********************************
+981603-                       * table agn                                                                       *
+981604-                       * phi(h) 20.750000 range 0.999466 7354000.000000                                  *
+981605-                       * grid from 20.0 to 20.75 in 0.25 dex steps                                       *
+981606-                       * HDEN=10.750000                                                                  *
+981607-                       * grid from 7.0 to 14.0 in 0.25 dex steps                                         *
+981608-                       * normalize to "inci" 1215 scale factor = 1215                                    *
+--
+1329800: C-This is the last iteration and He 2 Ly(a) optical depth changed by     28% (was 6.94e+04). Try another iteration.
+1329801-  !Continuum fluorescent production of H-beta was very important.
+1329802-  !Photoionization of upper levels of [O III] reached 14.6% of the total O++ photo rate.
+1329803-  !The largest plasma frequency was 1.85e-06 Ryd = 4.94e+04 micron  The continuum is set to 0 below this.
+1329804-  !The largest continuum brightness temperature was 1.633e+06K at 9.109e-03 Ryd.
+1329805-  !AGE: Cloud age was not set.  Longest timescale was 3.59e+01 s.
+1329806-  !The excitation temp of Lya exceeded the electron temp, largest value was 2.42e+04K (gas temp there was 2.22e+04K, zone 232)
+1329807-  !Rate of induced H 2-photon emission reached 3.05e+01 s^-1
+1329808-  !Free-free heating was 33.3% of the total.
+1329809-  !The CMB was not included.  This is added with the CMB command.
+1329810-  !The ratio of radiation to gas pressure reached 8.20e-01 at zone 163.  Caused by Lyman alpha.
+1329811-  !The radiation pressure jumped by 249% at zone 3, from 1.63e-05 to 1.05e-04 to 5.05e-04
+1329812-   Te-ne bounds of Case B lookup table exceeded, H I Case B line intensities set to zero.
+1329813-   The largest continuum occupation number was 8.228e+04 at 1.730e-06 Ryd.
+1329814-   The continuum occupation number fell below 1 at 1.714e+00 microns.
+1329815-   The continuum brightness temperature fell below 10,000K at 1.820e+00 microns.
+1329816-   Photoionization of Ca+ 2D level by Ly-alpha reached   43.8% of the total rate out.
+1329817-   Line absorption heating reached 2.15% of the global heating.
+1329818-   G-bar cooling lines reached 7.37% of the local cooling.  Line=P  5 1121A
+1329819-   Line absorption heating reached 6.53% of the local heating.
+1329820-   Induced recombination was  99.9% of the total for H level170
+1329821-   Stimulated emission was 100.0% of the total for H transition171 -170
+1329822-   Timescale-photoerosion of Fe=1.56e+04 yr
+1329823-   Compton heating was   1.2% of the total.
+1329824-   Induced recombination cooling was 6.3% of the total.
+1329825-   The continuum optical depth at the lowest energy considered (1.055e-08 Ryd) was 1.168e+12.
+1329826-   The optical depth to electron scattering is 0.080
+1329827-   Line radiation pressure capped by thermalization length.
+1329828-
+1329829-                       *********************************> Cloudy 08.00 <**********************************
+1329830-                       * table agn                                                                       *
+1329831-                       * phi(h) 22.250000 range 0.999466 7354000.000000                                  *
+1329832-                       * grid from 22.0 to 22.75 in 0.25 dex steps                                       *
+1329833-                       * HDEN=11.500000                                                                  *
+1329834-                       * grid from 7.0 to 14.0 in 0.25 dex steps                                         *
+1329835-                       * normalize to "inci" 1215 scale factor = 1215                                    *
+1329836-                       * C                                                                               *
+1329837-                       * atom H-like element hydrogen levels resolved 18                                 *
+1329838-                       * atom He-like element helium levels resolved 15                                  *
+1329839-                       * atom H-like element helium levels resolved 15                                   *
+1329840-                       * set nend 5000                                                                   *
+1329841-                       * stop column density 23                                                          *
+--
+1494646: C-This is the last iteration and He 2 Ly(a) optical depth changed by     32% (was 8.28e+04). Try another iteration.
+1494647-  !Continuum fluorescent production of H-beta was very important.
+1494648-  !Photoionization of upper levels of [O III] reached 16.5% of the total O++ photo rate.
+1494649-  !The largest plasma frequency was 5.84e-06 Ryd = 1.56e+04 micron  The continuum is set to 0 below this.
+1494650-  !The largest continuum brightness temperature was 9.184e+06K at 9.109e-03 Ryd.
+1494651-  !AGE: Cloud age was not set.  Longest timescale was 4.36e+00 s.
+1494652-  !G-bar cooling lines reached 23.72% of the local cooling.  Line=O  3  698A
+1494653-  !Rate of induced H 2-photon emission reached 1.72e+02 s^-1
+1494654-  !Free-free heating was 64.8% of the total.
+1494655-  !The CMB was not included.  This is added with the CMB command.
+1494656-  !The ratio of radiation to gas pressure reached 5.71e-01 at zone 176.  Caused by Lyman alpha.
+1494657-  !The radiation pressure jumped by 334% at zone 3, from 0.00e+00 to 4.65e-05 to 3.10e-04
+1494658-   Thermal collisional ionization of H reached 1.80% of the local ionization rate.
+1494659-   Te-ne bounds of Case B lookup table exceeded, H I Case B line intensities set to zero.
+1494660-   Photoionization of upper levels of [O I] reached 1.3% of the total O destruction rate.
+1494661-   The largest continuum occupation number was 2.669e+05 at 5.196e-06 Ryd.
+1494662-   The continuum occupation number fell below 1 at 1.115e+00 microns.
+1494663-   The continuum brightness temperature fell below 10,000K at 1.024e+00 microns.
+1494664-   Photoionization of Ca+ 2D level by Ly-alpha reached   14.4% of the total rate out.
+1494665-   Line absorption heating reached 3.26% of the global heating.
+1494666-   Line absorption heating reached 7.52% of the local heating.
+1494667-   Induced recombination was 100.0% of the total for H level170
+1494668-   Stimulated emission was 100.0% of the total for H transition171 -170
+1494669-   Timescale-photoerosion of Fe=2.78e+03 yr
+1494670-   Induced recombination cooling was 14.9% of the total.
+1494671-   The Balmer continuum optical depth was 5.26e-02.
+1494672-   The continuum optical depth at the lowest energy considered (1.055e-08 Ryd) was 8.345e+12.
+1494673-   The continuum of the computed structure may be optically thick in the near infrared.
+1494674-   The optical depth to electron scattering is 0.080
+1494675-   Line radiation pressure capped by thermalization length.
+1494676-
+1494677-                       *********************************> Cloudy 08.00 <**********************************
+1494678-                       * table agn                                                                       *
+1494679-                       * phi(h) 23.000000 range 0.999466 7354000.000000                                  *
+1494680-                       * grid from 23.0 to 23.25 in 0.25 dex steps                                       *
+1494681-                       * HDEN=12.500000                                                                  *
+1494682-                       * grid from 7.0 to 14.0 in 0.25 dex steps                                         *
+1494683-                       * normalize to "inci" 1215 scale factor = 1215                                    *
+1494684-                       * C                                                                               *
+1494685-                       * atom H-like element hydrogen levels resolved 18                                 *
+1494686-                       * atom He-like element helium levels resolved 15                                  *
+1494687-                       * atom H-like element helium levels resolved 15                                   *
