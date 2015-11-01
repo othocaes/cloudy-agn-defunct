@@ -1,5 +1,3 @@
-Hi Dr. Korista,
-
 This regards the multiplets about which we currently obtain information from Cloudy, indexed by TOTL. Specifically, the new way these are treated in Cloudy 15.
 
 It appears C15 adds a new category of emission lines after "molecules" called "blends". It seems this has largely replaced the TOTL lines we are used to seeing, but there are some exceptions. For example, there is no longer any TOTL line around N III 1750. Here is the readout:
@@ -66,6 +64,3 @@ The only places I found where TOTL lines still exist are in the general properti
 
 
 This example does not sum properly, either. So, I really have no idea what's going on, here. But, as we mostly decided before, it shouldn't matter much for our current purposes.
-
-Best Regards,
-Otho Ulrich
