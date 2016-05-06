@@ -28,7 +28,7 @@ int main(int argc, char const *argv[]) {
         std::cout
             << std::setprecision(2)
             << std::fixed
-            << "Supposed smooth at: "
+            << "Reported smooth at: "
             << outlier_it->first
             << ", "
             << outlier_it->second
