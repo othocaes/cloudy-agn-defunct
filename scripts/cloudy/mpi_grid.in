@@ -32,7 +32,7 @@ atom He-like element helium resolved levels 15
 set nend 5000
 //
 ////// Include additional spectral resolution around Lyman, Briggs, Etc.
-// for the diffuse continuum
+// for the diffuse continuum, and across the spectrum.
 //
 set nFnu add 800 angstrom
 set nFnu add 840 angstrom
@@ -61,6 +61,7 @@ set nFnu add 7000 angstrom
 set nFnu add 7500 angstrom
 set nFnu add 8000 angstrom
 set nFnu add 8204 angstrom
+set nFnu add 8207 angstrom
 set nFnu add 8210 angstrom
 set nFnu add 8500 angstrom
 set nFnu add 9000 angstrom
