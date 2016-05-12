@@ -13,6 +13,6 @@ num_proc=$(cat ${PBS_NODEFILE} | wc -l)
 
 module load openmpi/gnu/1.7.3
 
-# replace ~/cloudy/cloudy_mpi with path to cloudy MPI executable file
+# replace ~/cloudy-agn/bin/cloudy_mpi with path to cloudy MPI executable file
 cd ~/${RUN_DIR}
-time mpirun -machinefile ${PBS_NODEFILE} -np ${num_proc} ~/cloudy-agn/cloudy_mpi -r ${RUN_FILE}
+time mpirun -machinefile ${PBS_NODEFILE} -np ${num_proc} ~/cloudy-agn/bin/cloudy_mpi -r ${RUN_FILE}
