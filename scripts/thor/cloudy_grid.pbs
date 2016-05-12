@@ -1,8 +1,8 @@
 #!/bin/sh -login
 #PBS -l mem=128GB
 #PBS -l nodes=4:ppn=16:research
-#PBS -l walltime=150:00:00
-#PBS -N cldy_4_181515_23
+#PBS -l walltime=169:00:00
+#PBS -N ngc5548_cldn23
 #PBS -j oe
 
 
