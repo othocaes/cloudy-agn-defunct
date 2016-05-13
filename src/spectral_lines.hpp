@@ -189,6 +189,14 @@ agn::line_list agn::read_line_list(std::ifstream& inputfile) {
 			<< "Adding label "
 			<< label
 			<< " to capture list.\n";
+        if (label.substr(0,4).compare(std::string("nFnu")) == 0) {
+            std::string applabel = label.substr(3);
+            list.push_back(std::string("nFnu").append(applabel));
+            list.push_back(std::string("nInu").append(applabel));
+            list.push_back(std::string("InwT").append(applabel));
+            list.push_back(std::string("InwC").append(applabel));
+            continue;
+        }
 		list.push_back(label);
 	}
 	return list;
