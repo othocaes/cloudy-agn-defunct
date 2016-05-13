@@ -1,6 +1,6 @@
-//////	CLOUDY 13.03 grid run as hypothetical values for AGN observation
+@//////	CLOUDY 13.03 grid run as hypothetical values for AGN observation
 //
-title AGN BLR grid hden_vs_phi .25 dex
+title ngc 5548 BLR hden_vs_phi .25 dex
 //
 // Arguments varied for this grid:
 // 	log of incident intensity from 17 to 24
@@ -17,7 +17,6 @@ print line inward
 print line iso collapsed
 print line faint -3
 print last
-print short
 set line precision 6
 //
 //////	Resolved energy states for atomic models
@@ -41,27 +40,42 @@ print line faint -3
 //
 // diffuse_inward can be calculated with (InwT - InwC = InwDiffuse)
 //
-print continuum
-set nFnu diffuse_outward, diffuse_inward, incident_reflected
-set nFnu add 910A
-set nFnu add 913A
-set nFnu add 1650A
-set nFnu add 1900A
-set nFnu add 3645A
-set nFnu add 3648A
-set nFnu add 5100A
-set nFnu add 6500A
-set nFnu add 7000A
-set nFnu add 7500A
-set nFnu add 8000A
-set nFnu add 8204A
-set nFnu add 8207A
-set nFnu add 8500A
-set nFnu add 9000A
-set nFnu add 9500A
-set nFnu add 10000A
-set nFnu add 10500A
-set nFnu add 11000A
+set nFnu add 800 angstrom
+set nFnu add 840 angstrom
+set nFnu add 880 angstrom
+set nFnu add 910 angstrom
+set nFnu add 913 angstrom
+set nFnu add 960 angstrom
+set nFnu add 1240 angstrom
+set nFnu add 1324 angstrom
+set nFnu add 1410 angstrom
+set nFnu add 1650 angstrom
+set nFnu add 1900 angstrom
+set nFnu add 2200 angstrom
+set nFnu add 2700 angstrom
+set nFnu add 3000 angstrom
+set nFnu add 3300 angstrom
+set nFnu add 3400 angstrom
+set nFnu add 3644 angstrom
+set nFnu add 3645 angstrom
+set nFnu add 3648 angstrom
+set nFnu add 4400 angstrom
+set nFnu add 5100 angstrom
+set nFnu add 5600 angstrom
+set nFnu add 6500 angstrom
+set nFnu add 7000 angstrom
+set nFnu add 7500 angstrom
+set nFnu add 8000 angstrom
+set nFnu add 8204 angstrom
+set nFnu add 8207 angstrom
+set nFnu add 8210 angstrom
+set nFnu add 8500 angstrom
+set nFnu add 9000 angstrom
+set nFnu add 9500 angstrom
+set nFnu add 10000 angstrom
+set nFnu add 10500 angstrom
+set nFnu add 11000 angstrom
+set nFnu add 13000 angstrom
 //
 //////	Print equivalent widths
 //
@@ -289,4 +303,4 @@ grid range from 17 to 24 with .25 dex
 //////	Stopping condition and run
 //
 stop total column density 23
-iterate to convergence
+iterate to convergence max=40

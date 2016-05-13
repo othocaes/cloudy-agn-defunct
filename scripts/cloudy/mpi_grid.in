@@ -1,6 +1,6 @@
 //////	CLOUDY 13.03 grid script
 //
-title AGN BLR grid hden_vs_phi .25 dex
+title ngc 5548 BLR grid hden_vs_phi .25 dex
 //
 // Arguments varied for this grid:
 // 	log of incident intensity from 17 to 24
@@ -33,6 +33,8 @@ set nend 5000
 //
 ////// Include additional spectral resolution around Lyman, Briggs, Etc.
 // for the diffuse continuum, and across the spectrum.
+//
+// diffuse_inward can be calculated with (InwT - InwC = InwDiffuse)
 //
 set nFnu add 800 angstrom
 set nFnu add 840 angstrom
