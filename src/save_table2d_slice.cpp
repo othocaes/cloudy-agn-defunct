@@ -13,3 +13,4 @@ int main(int argc, char const *argv[])
 	fileout << agn::format_table1d(input_table.value[atof(argv[2])]);
 	return 0;
 }
+
