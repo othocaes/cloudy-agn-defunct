@@ -42,7 +42,6 @@ set nFnu add 880 angstrom
 set nFnu add 910 angstrom
 set nFnu add 913 angstrom
 set nFnu add 960 angstrom
-set nFnu add 1218 angstrom
 set nFnu add 1240 angstrom
 set nFnu add 1324 angstrom
 set nFnu add 1410 angstrom
