@@ -8,7 +8,7 @@
 namespace agn {
 
 //	Continuum domain, step size constant in log space
-const double CONT_MIN_ENERGY=1e-2; // eV
+``const double CONT_MIN_ENERGY=1e-2; // eV
 const double CONT_MAX_ENERGY=1e5; // eV
 const double CONT_MIN_X=log10(CONT_MIN_ENERGY);
 const double CONT_MAX_X=log10(CONT_MAX_ENERGY);
@@ -18,8 +18,8 @@ const double CONT_MIN_VAL=1e-35;
 //	Cloudy's continuum domain, for reference, version 13.3
 const double CLOUDY_EMM = 1.001e-8; // in Rydberg
 const double CLOUDY_EGAMRY = 7.354e6; // in Rydberg
-const double CLOUDY_MIN_EV=CLOUDY_EMM*RYDBERG_UNIT_EV; // in eV
-const double CLOUDY_MAX_EV=CLOUDY_EGAMRY*RYDBERG_UNIT_EV; // in eV
+const double CLOUDY_MIN_EV=CLOUDY_EMM*RYDBERG_UNIT_EV;
+const double CLOUDY_MAX_EV=CLOUDY_EGAMRY*RYDBERG_UNIT_EV;
 
 const double IN_EV_2500A=12398.41929/2500;
 
@@ -49,7 +49,7 @@ public:
 	// Continuum shape arguments
 	double _T; //TCut
 	double _alpha_ox;
-	double _alpha_x; //alpha_xray
+	double _alpha_x;
 	double _alpha_uv;
 	double _cutoff_uv_rydberg;
 	double _cutoff_xray_rydberg;
