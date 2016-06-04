@@ -40,7 +40,7 @@ hcᓯ2500ᗉeVᗆ = 12398.41929/2500;
 #         # if (output.value[hνᗉkeVᗆ] > max) max = output.value[hνᗉkeVᗆ];
 #         # if (output.value[hνᗉkeVᗆ] < min) min = output.value[hνᗉkeVᗆ];
 #         output.append(value)
-# 
+#
 #     # Add a final point at 100 KeV
 #     hνᗉkeVᗆ = 1e2;
 #     value = sum(hνᗉkeVᗆ);
@@ -123,16 +123,17 @@ sed_plot.set_ylim(1e-1,1e2)
 sed_plot.set_aspect(1)
 sed_plot.set_title("log-log plot of SED")
 
-sed_plot.plot(test_table[0],test_table[1],"o-")
+sed_plot.plot(test_table[0],test_table[1])
 
+fig.show()
 
 #for pair in test_table:
 #    print (pair[0],pair[1])
 
 
-index=0
-for energy in test_table[0]:
-    print (energy,test_table[1][index])
-    index += 1
+# index=0
+# for energy in test_table[0]:
+#     print (energy,test_table[1][index])
+#     index += 1
 
 
