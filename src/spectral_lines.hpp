@@ -189,8 +189,8 @@ agn::line_list agn::read_line_list(std::ifstream& inputfile) {
 			<< "Adding label "
 			<< label
 			<< " to capture list.\n";
+        std::string applabel = label.substr(4);
         if (label.substr(0,4).compare(std::string("nFnu")) == 0) {
-            std::string applabel = label.substr(3);
             list.push_back(std::string("nFnu").append(applabel));
             list.push_back(std::string("nInu").append(applabel));
             list.push_back(std::string("InwT").append(applabel));
@@ -198,6 +198,7 @@ agn::line_list agn::read_line_list(std::ifstream& inputfile) {
             continue;
         }
 		list.push_back(label);
+        list.push_back(std::string("Inwd ").append(applabel));
 	}
 	return list;
 }
@@ -210,6 +211,10 @@ std::list<agn::eqwidth_table> agn::compile_eqwidth_tables(agn::cloudy_grid grid,
 		double x,y;
 		agn::cloudy_line_data data;
 		agn::eqwidth_table new_table;
+        if(agn::debug) std::cout 
+            << "Processing label " 
+            << *line_label_it 
+            << std::endl;
 		new_table.header[0] = *line_label_it;
 		new_table.header[0].append("  relative to Inci 1215.00A scaled to 1215.00A");
 		new_table.header[1] = "Hden   Phi(H)  Eq_Width (A)";
