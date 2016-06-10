@@ -143,7 +143,7 @@ std::string agn::format_eqwidth_table_slice(agn::eqwidth_table table,agn::iterat
 
 
 std::ostream& agn::operator<< (std::ostream& outstream, agn::eqwidth_table table) {
-	outstream 
+	outstream
 		<< table.header[0]
 		<< std::endl
 		<< table.header[1]
@@ -211,9 +211,9 @@ std::list<agn::eqwidth_table> agn::compile_eqwidth_tables(agn::cloudy_grid grid,
 		double x,y;
 		agn::cloudy_line_data data;
 		agn::eqwidth_table new_table;
-        if(agn::debug) std::cout 
-            << "Processing label " 
-            << *line_label_it 
+        if(agn::debug) std::cout
+            << "Processing label "
+            << *line_label_it
             << std::endl;
 		new_table.header[0] = *line_label_it;
 		new_table.header[0].append("  relative to Inci 1215.00A scaled to 1215.00A");
