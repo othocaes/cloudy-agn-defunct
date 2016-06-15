@@ -236,7 +236,9 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 			getline(inputfile,inputline);
 			header.append(inputline);
 			header.append("\n");
-			if(inputline[1] == 'C' && inputline[2] == '-') cautions.push_back(inputline);
+			if((inputline[1] == 'C' && inputline[2] == '-')
+					|| (inputline[1] == ' ' && inputline[2] == '!' ))
+				cautions.push_back(inputline);
 		}
 		point.header = header;
 		point.cautions = cautions;
