@@ -19,8 +19,8 @@ int main(int argc, char const *argv[]) {
 	std::ifstream line_list_file;
 	line_list_file.open(argv[2]);
 	agn::line_list lines_to_print = agn::read_line_list(line_list_file);
-	std::cout 
-		<< "Compiling table2ds for " 
+	std::cout
+		<< "Compiling table2ds for "
 		<< lines_to_print.size()
 		<< " emission lines.\n";
 	std::list<agn::eqwidth_table> tables = agn::compile_eqwidth_tables(grid,lines_to_print,1215.00);
@@ -43,10 +43,46 @@ int main(int argc, char const *argv[]) {
 		fortfilenum++;
 	}
 
+    int num_unconverged = 0;
+    agn::cloudy_grid::iterator result_it = grid.begin();
+    std::ofstream cautionreportfile;
+    cautionreportfile.open("cautions");
+    cautionreportfile
+        << "The following solutions probably did not converge."
+        << std::endl << std::endl;
+    while(result_it != grid.end()) {
+        if (result_it->second.iterations >= 40) {
+            num_unconverged++;
+            cautionreportfile
+                << "hden = "
+                << std::fixed
+                << std::setprecision(3)
+                << result_it->second.hden
+                << ", phi = "
+                << result_it->second.phi
+                << std::endl
+                << "───────────────────────────"
+                << std::endl;
+            std::list<std::string>::iterator caution_it = result_it->second.cautions.begin();
+            while(caution_it != result_it->second.cautions.end()) {
+                cautionreportfile
+                    << *caution_it
+                    << std::endl;
+                    caution_it++;
+            }
+            cautionreportfile << std::endl << std::endl;
+        }
+        result_it++;
+    }
+
+    std::cout
+        << "Saved cautions for "
+        << num_unconverged
+        << " unconverged solutions."
+        << std::endl;
+        cautionreportfile.close();
+
 	std::cout << "Done.\n";
 	return 0;
 }
-
-
-
 

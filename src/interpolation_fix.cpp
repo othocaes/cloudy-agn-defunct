@@ -34,7 +34,7 @@ int main(int argc, char const *argv[]) {
             << outlier_it->second
             << "\n"
             << std::scientific
-            << "Old value: " 
+            << "Old value: "
             << jagged_table.value[outlier_it->first][outlier_it->second]
             << "\t"
             << "New value: "
@@ -43,7 +43,7 @@ int main(int argc, char const *argv[]) {
             outlier_it++;
     }
     std::ofstream smoothed_table_file;
-    smoothed_table_file.open("smoothed_eqwidth_table");
+    smoothed_table_file.open(argv[2]);
     smoothed_table_file << agn::format_eqwidth_table(smooth_table);
     smoothed_table_file.close();
 
@@ -118,13 +118,13 @@ agn::eqwidth_table agn::smooth(agn::eqwidth_table & jagged_table,agn::gridcoordl
         if ( agn::debug ) {
             std::cout
                 << std::scientific
-                << "Smoothed: " 
+                << "Smoothed: "
                 << newx
                 << ", "
-                << oldy 
+                << oldy
                 << " -> "
                 << newy
-                << "\n"; 
+                << "\n";
         }
 
         coord_it++;
@@ -150,23 +150,23 @@ agn::gridcoordlist agn::known_outliers() {
 }
 
 agn::gridcoordlist agn::find_outliers(agn::eqwidth_table jagged_table) {
-    if (agn::debug) std::cout 
+    if (agn::debug) std::cout
         << "Scanning for outliers.\n";
     agn::gridcoordlist outliers;
 
-    // The distribution is 
-    // parameterised by x=log(jagged_table.hden) and 
+    // The distribution is
+    // parameterised by x=log(jagged_table.hden) and
     // y=log(jagged_table.eqwidth).
 
     agn::iterator2d hden_it = jagged_table.value.begin();
     while ( hden_it != jagged_table.value.end() ) {
         agn::table1d slice = hden_it->second;
-        if( agn::debug ) std::cout 
+        if( agn::debug ) std::cout
             << "\nhden= "
-            << (hden_it->first) 
+            << (hden_it->first)
             << ": ";
 
-        // Crawl, checking slope, until a positive slope is found. 
+        // Crawl, checking slope, until a positive slope is found.
         agn::table1d::iterator phi_it = slice.begin();
         double x1,x2,y1,y2,slope;
         std::vector<double> ref_curve_x,ref_curve_y,curve_back_x,curve_back_y;
@@ -220,7 +220,7 @@ agn::gridcoordlist agn::find_outliers(agn::eqwidth_table jagged_table) {
             phi_it++;
         }
 
-        if ( phi_it == slice.end() ) { 
+        if ( phi_it == slice.end() ) {
             if (agn::debug) std::cout
                 << "Clean";
             hden_it++;
@@ -282,7 +282,7 @@ agn::gridcoordlist agn::find_outliers(agn::eqwidth_table jagged_table) {
 
         std::vector<double>::iterator curve_back_x_it = curve_back_x.begin();
         std::vector<double>::iterator curve_back_y_it = curve_back_y.begin();
-        while ( curve_back_x_it != curve_back_x.end() && 
+        while ( curve_back_x_it != curve_back_x.end() &&
                  curve_back_y_it != curve_back_y.end() ) {
             ref_curve_x.push_back(*curve_back_x_it);
             ref_curve_y.push_back(*curve_back_y_it);
@@ -329,7 +329,7 @@ agn::gridcoordlist agn::find_outliers(agn::eqwidth_table jagged_table) {
         //    << ", ";
         phi_it = slice.find(anomalies_start_x);
         while (phi_it != (++(slice.find(anomalies_end_x)))) {
-            y1 = log10(phi_it->second); 
+            y1 = log10(phi_it->second);
             x1 = phi_it->first;
             y2 = testing_spline[x1];
             //threshold = RATIO_THRESHOLD_MULTIPLIER * (y2 - EQWIDTH_MIN_VAL_LOG);
