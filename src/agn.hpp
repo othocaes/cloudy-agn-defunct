@@ -45,7 +45,7 @@ struct cloudy_line_data {
 
 typedef std::map<std::string,cloudy_line_data> cloudy_line_output;
 
-struct cloudy_result {	
+struct cloudy_result {
 	std::string header, footer;
 	std::list<std::string> emergent_line_raw_text;
 	std::list<std::string> cautions;
@@ -60,7 +60,7 @@ struct cloudy_result {
 		iterations(0),
 		phi(0),
 		hden(0),
-		colden(0) 
+		colden(0)
 		{}
 };
 
@@ -70,7 +70,7 @@ cloudy_grid read_cloudy_grid(std::ifstream&);
 //	Operator<< prints general info about the run result.
 std::ostream& operator<< (std::ostream&, cloudy_result);
 //  Seeks an instream to the line after the first occurrence of seek_string.
-void seek_to(std::string,std::istream&); 
+void seek_to(std::string,std::istream&);
 
 
 } // end namespace agn
@@ -123,7 +123,7 @@ void agn::seek_to(std::string seek_string,std::istream& stream) {
 
 std::string agn::format_table1d(agn::table1d table) {
     std::stringstream output;
-    output 
+    output
         << std::scientific
         << std::setprecision(5);
     agn::table1d::iterator x=table.begin();
@@ -272,7 +272,7 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 			}
 		}
 		point.colden = colden;
-		if(agn::debug) std::cout 
+		if(agn::debug) std::cout
 			<< " Grabbing emission lines.";
 		agn::seek_to("Emergent line intensities",inputfile);
 		std::list<std::string> emergent_line_raw_text;
@@ -321,7 +321,7 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 			}
 			linetext_it++;
 		}
-		if(agn::debug) std::cout 
+		if(agn::debug) std::cout
 			<< " Grabbing footer.";
 		while (inputline == "")
 			getline(inputfile,inputline);
@@ -332,9 +332,9 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 			footer.append("\n");
 			getline(inputfile,inputline);
 		}
-		if(agn::debug) std::cout 
+		if(agn::debug) std::cout
 			<< "\nAdding point to grid: "
-			<< point 
+			<< point
 			<< std::endl;
 		grid[*coords] = point;
 		coords++;
