@@ -198,7 +198,7 @@ agn::line_list agn::read_line_list(std::ifstream& inputfile) {
             continue;
         }
 		list.push_back(label);
-        list.push_back(std::string("Inwd ").append(applabel));
+        list.push_back(std::string("Inwd").append(applabel));
 	}
 	return list;
 }
