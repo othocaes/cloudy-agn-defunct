@@ -215,8 +215,13 @@ std::list<agn::eqwidth_table> agn::compile_eqwidth_tables(agn::cloudy_grid grid,
             << "Processing label "
             << *line_label_it
             << std::endl;
-		new_table.header[0] = *line_label_it;
-		new_table.header[0].append("  relative to Inci 1215.00A scaled to 1215.00A");
+        std::stringstream header0;
+        header0
+            << *line_label_it
+            << "  relative to Inci 1215.00A scaled to "
+            << scale_factor
+            << "A.";
+        new_table.header[0] = header0.str();
 		new_table.header[1] = "Hden   Phi(H)  Eq_Width (A)";
 		agn::cloudy_grid::iterator result_it = grid.begin();
 		while (result_it != grid.end()) {

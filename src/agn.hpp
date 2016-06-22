@@ -184,15 +184,15 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 		pos = inputline.find(seek_string);
 		if (pos != std::string::npos) break;
 	}
-	if(agn::debug) std::cout 
-		<< "Collecting grid meta data starting on line " 
-		<< line_num 
+	if(agn::debug) std::cout
+		<< "Collecting grid meta data starting on line "
+		<< line_num
 		<< std::endl;
 	agn::gridcoordlist coordlist;
 	std::pair<double,double> xy (0,0);
 	seek_string="**************************************************";
 	while(!inputfile.eof()) {
-		while (inputline.find(seek_string) == std::string::npos) 
+		while (inputline.find(seek_string) == std::string::npos)
 			getline(inputfile,inputline);
 		while(inputfile.peek() == ' ') inputfile.get(); // Skip blank space
 		// Break for first grid

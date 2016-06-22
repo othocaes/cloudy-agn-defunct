@@ -59,22 +59,22 @@ int main(int argc, char const *argv[])
         table2 >> hden2 >> phi2 >> magnitude2;
         resultant_magnitude[i] = magnitude1[i] - magnitude2;
         }
-        if ( resultant_magnitude[i] < 1e-10 ) 
+        if ( resultant_magnitude[i] < 1e-10 )
             resultant_magnitude[i]=1e-10;
     }
 
 
 
-    std::cout 
+    std::cout
             << first_line
             << std::endl
             << "HDen   Phi(H)  ScaInten"
             << std::endl;
 
     for (int i=0; i<table_entries; i++) {
-        std::cout 
-            << std::fixed 
-            << std::setprecision(3) 
+        std::cout
+            << std::fixed
+            << std::setprecision(3)
             << hden1[i]
             << "  "
             << phi1[i]
