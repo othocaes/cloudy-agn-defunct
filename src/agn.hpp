@@ -212,7 +212,7 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 		}
 		else {
 			getline(inputfile,inputline);
-			while (inputline.find(seek_string) == std::string::npos) 
+			while (inputline.find(seek_string) == std::string::npos)
 				getline(inputfile,inputline);
 		}
 	}

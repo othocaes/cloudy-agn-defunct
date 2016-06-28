@@ -2,8 +2,8 @@
 # Lines appear in approximate order they appear in Cloudy standard output file.
 
 #two incident continuum points
-inci 1215.00A
-inci 4860.00A
+Inci 1215.00A
+Inci 4860.00A
 
 #Lyman Lines:
 TOTL 1215.68A

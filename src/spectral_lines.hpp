@@ -21,6 +21,7 @@ struct eqwidth_table {
 	std::string header[2];
 	table2d value;
 };
+bool is_zero(const eqwidth_table&);
 eqwidth_table read_eqwidth_table(std::ifstream& table_file);
 std::string format_eqwidth_table(eqwidth_table table);
 std::string format_eqwidth_table_slice(eqwidth_table table,iterator2d x);
@@ -66,8 +67,21 @@ std::ostream& operator<< (std::ostream&,eqwidth_table);
 
 
 
-
 // Definitions
+
+bool agn::is_zero(const eqwidth_table& table_to_check) {
+    agn::table2d::const_iterator x_it = table_to_check.value.begin();
+    while (x_it != table_to_check.value.end()) {
+        agn::table1d::const_iterator y_it= x_it->second.begin();
+        while (y_it != x_it->second.end()) {
+            if (y_it->second != EQWIDTH_MIN_VAL)
+                return false;
+                y_it++;
+        }
+        x_it++;
+    }
+    return true;
+}
 
 
 agn::eqwidth_table agn::read_eqwidth_table(std::ifstream& table_file) {

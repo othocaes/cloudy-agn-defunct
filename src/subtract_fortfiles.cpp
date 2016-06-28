@@ -68,7 +68,8 @@ int main(int argc, char const *argv[])
     std::cout
             << first_line
             << std::endl
-            << "HDen   Phi(H)  ScaInten"
+            //<< "HDen   Phi(H)  ScaInten"
+            << second_line
             << std::endl;
 
     for (int i=0; i<table_entries; i++) {
@@ -85,5 +86,7 @@ int main(int argc, char const *argv[])
             << std::endl;
     }
 
+    table1.close();
+    table2.close();
     return 0;
 }

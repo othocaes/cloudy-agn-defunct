@@ -25,11 +25,39 @@ int main(int argc, char const *argv[]) {
 		<< " emission lines.\n";
 	std::list<agn::eqwidth_table> tables = agn::compile_eqwidth_tables(grid,lines_to_print,1215.00);
 
+
+    // Remove any tables that are zero.
+    std::list<agn::eqwidth_table>::iterator table_it = tables.begin();
+    std::ofstream zeroreport;
+    zeroreport.open("zero_report");
+    zeroreport << "These headers were pulled from tables"
+                << " that returned minimum values."
+                << std::endl;
+    int zeroes=0;
+    while(table_it != tables.end()) {
+        if(agn::is_zero(*table_it)) {
+            zeroreport << " "
+                        << table_it->header[0]
+                        << std::endl;
+            zeroes++;
+            table_it = tables.erase(table_it);
+            continue;
+        }
+
+    table_it++;
+    }
+    std::cout << "Removed "
+            << zeroes
+            << " tables from the list because"
+            << " they had zero value."
+            << std::endl;
+
+    // Write the tables to the fortfile stack.
 	std::cout
 		<< "Printing "
 		<< tables.size()
 		<< " tables to fortfiles.\n";
-	std::list<agn::eqwidth_table>::iterator table_it = tables.begin();
+    table_it = tables.begin();
 	int fortfilenum=11;
 	while(table_it != tables.end()) {
 		std::ofstream outfile;
