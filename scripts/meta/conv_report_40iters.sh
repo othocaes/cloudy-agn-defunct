@@ -1,0 +1,1 @@
+num=0; for file in `grep -l '40 of 40' gridoutput/[0-9]*_[0-9]*|cut -d: -f1`; do echo $(( ++num )) -  $file; grep "40 of 40" $file|tail -n1|cut -d'.' -f4; grep "HDEN=" $file|head -n1|sed 's#\*##g'|sed 's#^\s*# #'; grep "phi(h)" $file|head -n1|sed s#\*##g|sed 's#^\s*# #';egrep "C-" $file; echo; done > max_iterations_report.txt; less max_iterations_report.txt
