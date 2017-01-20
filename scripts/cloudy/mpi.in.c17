@@ -15,7 +15,7 @@ print line inward
 print line iso collapsed
 print line faint -3
 print last
-set line precision 6
+print line precision 6
 //
 //////	Resolved energy states for atomic models
 //
@@ -77,7 +77,7 @@ set nFnu add 13000 angstrom
 //
 //////	Print equivalent widths
 //
-normalize to 1215 scale to 1215
+//normalize to 1215 scale to 1215
 //
 //////	Background radiation
 //
