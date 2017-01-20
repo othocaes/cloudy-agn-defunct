@@ -326,7 +326,6 @@ set nFnu add 12850 angstrom
 set nFnu add 12900 angstrom
 set nFnu add 12950 angstrom
 set nFnu add 13000 angstrom
-
 //
 //////	Print equivalent widths
 //
