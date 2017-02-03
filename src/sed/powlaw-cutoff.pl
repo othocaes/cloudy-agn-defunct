@@ -33,6 +33,7 @@ open my $P, "|-", "gnuplot" or die;
 printflush $P qq[
         unset key
         set logscale xy
+        set xrange [.001,1000]
         plot "$N"
 ];
 <STDIN>;
