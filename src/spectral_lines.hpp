@@ -249,7 +249,7 @@ std::list<agn::eqwidth_table> agn::compile_eqwidth_tables(agn::cloudy_grid grid,
 			else {
 				data = result_it->second.emergent_line_intensity[label];
 				data.eq_width /= scale_factor;
-				if(agn::debug) std::cout
+				if(agn::line_debug) std::cout
 					<< "Added  "
 					<< std::setprecision(2)
 					<< std::fixed
