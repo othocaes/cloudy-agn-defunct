@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env bash
 
 # This still isn't really generalized. Need to go to a
 # specific directory of runs to run this. Feed it a list
