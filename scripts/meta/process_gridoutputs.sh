@@ -7,7 +7,7 @@ script_dir=$(
 base_dir=`pwd`
 bin_dir="$script_dir/../bin"
 
-for dir in $(echo cldn*)
+for dir in $(echo *cldn*)
 do
     echo "Processing ${dir}."
     $script_dir/operations/package_tables.sh $dir
