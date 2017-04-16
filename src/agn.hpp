@@ -18,6 +18,7 @@
 namespace agn {
 
 const bool debug = false;
+const bool line_debug = true;
 
 // General constants
 const double PI=3.14159265358979323846;
@@ -48,8 +49,10 @@ typedef std::map<std::string,cloudy_line_data> cloudy_line_output;
 struct cloudy_result {
 	std::string header, footer;
 	std::list<std::string> emergent_line_raw_text;
+	std::list<std::string> intrinsic_line_raw_text;
 	std::list<std::string> cautions;
 	cloudy_line_output emergent_line_intensity;
+	cloudy_line_output intrinsic_line_intensity;
 	int iterations;
 	double phi,hden,colden;
 	cloudy_result():
@@ -291,13 +294,39 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 		std::list<std::string>::iterator linetext_it=point.emergent_line_raw_text.begin();
 		std::list<std::string> duplicate_labels;
 		int index=0;
+		// For cloudy 17, the characters reserved for the output quantities:
+		// Label: 0-9
+		// Wavelength: 10-20
+		// radiated energy: 21-26
+		// eq width: 27-36
+		// Cloudy 13 had: 1,13; 17,5; 22,11; 
+		// c17: 0,18; 18,9; 27, 10
+
+		// c13 settings
+		int str1_pos = 1;
+		int str1_len = 13;
+		int str2_pos = 14;
+		int str2_len = 8;
+		int str3_pos = 22;
+		int str3_len = 9;
+
 		while(linetext_it != point.emergent_line_raw_text.end()) {
-			std::string label=(*linetext_it).substr(1,13);
+			std::string label=(*linetext_it).substr(str1_pos,str1_len);
 			agn::cloudy_line_data data;
 			data.index = ++index;
 			std::stringstream values;
-			data.radiated_energy = atof((*linetext_it).substr(17,5).c_str());
-			data.eq_width = atof((*linetext_it).substr(22,11).c_str());
+			data.radiated_energy = atof((*linetext_it).substr(str2_pos,str2_len).c_str());
+			data.eq_width = atof((*linetext_it).substr(str3_pos,str3_len).c_str());
+			if(line_debug) {
+				std::cout << *linetext_it 
+							<< ": " 
+							<< label 
+							<< "; "
+							<< data.radiated_energy
+							<< "; "
+							<< data.eq_width
+							<< "\n";
+			}
 			if(point.emergent_line_intensity.count(label) == 0) {
 				data.has_duplicates = false;
 				point.emergent_line_intensity[label] = data;

@@ -196,9 +196,9 @@ agn::line_list agn::read_line_list(std::ifstream& inputfile) {
 		if (line[0] == '#' || line.size() < 2) continue;
 		if (line[0] == ' ' && line[1] == ' ') continue;
 		if (line[0] == ' ')
-			label = line.substr(1,13);
+			label = line.substr(1,18);
 		else
-			label = line.substr(0,13);
+			label = line.substr(0,18);
 		if(agn::debug) std::cout
 			<< "Adding label "
 			<< label
