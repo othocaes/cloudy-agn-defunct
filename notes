@@ -2,8 +2,45 @@ By end of March: two grids run, continuum points decided upon, models decided up
 
 Run grid with new SED, or at least a point, check values: how to find the appropriate values to change our list accordingly, and what might need to be change?
 
+        
+
+
+
+    ✓   faint to equivalent width of 0.01 angstrom
+
+    ✓   compare between c13 and c17 -- show diferences in emergent line lists
+
+    ✓   new print lines to help reduce number of printed lines -- and to show old lines?
+
+    ✓   run models for comparising: 10.5,19.5
+
+    □   Why so many Fe 2 lines?
+
+    □   check if blnds are sums of the expected multiplets
+
+    □   add in more levels to the H atom, unresolved, 20, also add some to paschen, maybe others -- check how much time is lost
+
+    □   punch the paschen and balmer lines up to 18
+
+
+
+    check on ratios of inwd lines for blends 
+
+    check hazy for RRC H  1 meaning
+
+    c  3  1175->538, seen twice?
+
+    2 TOTL lines -> He 1   
+
+    for c13 if thor open:
+
+        magziarz, 10^23, use 2000 korista and goad abundances apj, also default abundance 
+
+
+
 use notes from paper to design contour plots
 
 what is the right way to model the components? check mehdipour and magdziarz paper, and comptonization paper
 
 more?
+

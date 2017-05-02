@@ -29,10 +29,6 @@ atom He-like element helium resolved levels 6
 //
 set nend 5000
 //
-//////	Threshold for emission line inclusion
-//
-print line faint -3
-//
 //////	Print diffuse continuum information in cloudy output
 // and include additional spectral resolution around Lyman, Briggs, Etc.
 //
