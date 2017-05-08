@@ -22,6 +22,18 @@ Run grid with new SED, or at least a point, check values: how to find the approp
 
     □   punch the paschen and balmer lines up to 18
 
+    □   Read Intrinsic Lines
+
+    □   Smoothing algorithm using n-dimensional smoothing
+
+    □   Contour plots
+
+    □   Run Grids in c17
+
+    □   Email about order of lines
+
+    □   Find blend correlated names and update
+
 
 
     check on ratios of inwd lines for blends 
