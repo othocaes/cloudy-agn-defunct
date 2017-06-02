@@ -10,7 +10,7 @@ save last incident continuum "incident_continuum"
 //
 //////	Formatting
 //
-print line column
+//print line column
 print line inward
 print line iso collapsed
 print line faint -3
