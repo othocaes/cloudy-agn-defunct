@@ -10,7 +10,7 @@ save last incident continuum "incident_continuum"
 //
 //////	Formatting
 //
-//print line column
+print line column
 print line inward
 print line iso collapsed
 print line faint -3
@@ -329,7 +329,7 @@ set nFnu add 13000 angstrom
 //
 //////	Print equivalent widths
 //
-normalize to 1215 scale to 1215
+normalize to "Inci" 1215 scale to 1215
 //
 //////	Background radiation
 //
