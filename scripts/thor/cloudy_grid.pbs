@@ -7,7 +7,7 @@
 
 
 RUN_FILE="mpi_grid"
-RUN_DIR="cloudy/runs/4thdex_181515models_23cldn"
+RUN_DIR="cloudy/runs/c17/mehdipour/grids/4thdex/cldn_23.00"
 
 num_proc=$(cat ${PBS_NODEFILE} | wc -l)
 
