@@ -38,6 +38,10 @@ typedef table2d::iterator iterator2d;
 typedef std::pair<double,double> coord2d;
 typedef std::list<coord2d> gridcoordlist;
 
+//  Seeks an instream to the line after the first occurrence of seek_string.
+void seek_to(std::string,std::istream&);
+
+
 struct cloudy_line_data {
 	double radiated_energy,eq_width;
 	int index;
@@ -68,12 +72,13 @@ struct cloudy_result {
 };
 
 typedef std::map<coord2d,cloudy_result> cloudy_grid;
+
 //	Easiest to read the entire grid from the file at once.
 cloudy_grid read_cloudy_grid(std::ifstream&);
+
 //	Operator<< prints general info about the run result.
 std::ostream& operator<< (std::ostream&, cloudy_result);
-//  Seeks an instream to the line after the first occurrence of seek_string.
-void seek_to(std::string,std::istream&);
+
 
 
 } // end namespace agn

@@ -23,7 +23,8 @@ int main(int argc, char const *argv[]) {
 		<< "Compiling table2ds for "
 		<< lines_to_print.size()
 		<< " emission lines.\n";
-	std::list<agn::eqwidth_table> tables = agn::compile_eqwidth_tables(grid,lines_to_print,1215.00);
+	std::list<agn::eqwidth_table> tables = 
+        agn::compile_eqwidth_tables(grid,lines_to_print,1215.00);
 
 
     // Remove any tables that are zero.
@@ -91,7 +92,8 @@ int main(int argc, char const *argv[]) {
                 << std::endl
                 << "───────────────────────────"
                 << std::endl;
-            std::list<std::string>::iterator caution_it = result_it->second.cautions.begin();
+            std::list<std::string>::iterator caution_it =
+                result_it->second.cautions.begin();
             while(caution_it != result_it->second.cautions.end()) {
                 cautionreportfile
                     << *caution_it

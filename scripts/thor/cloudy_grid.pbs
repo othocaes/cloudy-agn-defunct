@@ -15,4 +15,4 @@ module load openmpi/gnu/1.7.3
 
 # replace ~/cloudy-agn/bin/cloudy_mpi with path to cloudy MPI executable file
 cd ~/${RUN_DIR}
-time mpirun -machinefile ${PBS_NODEFILE} -np ${num_proc} ~/cloudy-agn/bin/cloudy_mpi -r ${RUN_FILE}
+time mpirun -machinefile ${PBS_NODEFILE} -np ${num_proc} ~/cloudy/bin/cloudy_mpi -r ${RUN_FILE}
