@@ -1,6 +1,6 @@
-//////	CLOUDY 13.03 grid run as hypothetical values for AGN observation
+//////  CLOUDY 17.00 4thdex grid using mehdipour ngc5548 SED
 //
-title ngc 5548 BLR hden_vs_phi .25 dex
+title mehdipour ngc5548 hden_vs_phi 4thdex
 //
 // single run copied from the standard mehdipour grid
 //
