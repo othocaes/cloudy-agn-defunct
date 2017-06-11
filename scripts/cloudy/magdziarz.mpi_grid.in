@@ -1,6 +1,6 @@
-//////	CLOUDY 17.00 4thdex grid using magdziarz ngc5548 SED
+//////	CLOUDY 17.00 4thdex grid using magdziarz 1997 ngc5548 SED
 //
-title magdziarz hden_vs_phi .25 dex
+title magdziarz 1997 hden_vs_phi .25 dex
 //
 // single run copied from the standard mehdipour grid
 //
@@ -342,7 +342,7 @@ grid range from 7 to 14 with .25 dex
 //
 //////	magdizard et al. 1998 NGC 5548 SED
 //
-table SED "magdziarz.tab"
+table SED "magdziarz1997.tab"
 //
 ////// Flux is varied
 //
