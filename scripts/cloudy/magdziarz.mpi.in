@@ -26,6 +26,9 @@ save line labels "line_labels"
 database H-like element hydrogen resolved levels 18
 database H-like element helium resolved levels 15
 database He-like element helium resolved levels 15
+//database H-like element hydrogen collapsed levels 30
+//database H-like element helium collapsed levels 30
+//database He-like element helium collapsed levels 40
 //
 ////// 	Prevent cloudy from stopping prematurely
 //
