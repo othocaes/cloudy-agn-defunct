@@ -17,6 +17,7 @@ print line faint -3
 print last
 print line precision 6
 Database print
+save line labels
 //
 //////	Resolved energy states for atomic models
 //
