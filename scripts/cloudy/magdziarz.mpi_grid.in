@@ -2,7 +2,7 @@
 //
 title magdziarz 1997 hden_vs_phi .25 dex
 //
-// single run copied from the standard mehdipour grid
+// single run copied from the standard magdziarz grid
 //
 //////	Output continua
 //
@@ -43,7 +43,7 @@ print line faint -3
 //
 // diffuse_inward can be calculated with (InwT - InwC = InwDiffuse)
 //
-sset nFnu add 800 angstrom
+set nFnu add 800 angstrom
 set nFnu add 840 angstrom
 set nFnu add 850 angstrom
 set nFnu add 880 angstrom
