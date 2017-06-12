@@ -16,6 +16,7 @@ print line iso collapsed
 print line faint -3
 print last
 print line precision 6
+print line iso collapsed on
 Database print
 save line labels ".line_labels"
 //
