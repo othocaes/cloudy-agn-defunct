@@ -1,5 +1,5 @@
-hnu       intensity 
-0.00100088  0.007052    
+# hnu       intensity     EFe
+0.00100088  0.007052      nuFnu units kev extrapolate
 0.00100097  0.00705274
 0.00103176  0.00731913
 0.00103256  0.00732605
@@ -355,3 +355,5 @@ hnu       intensity
 408.136     0.000501931
 412.51      0.000448598
 421.579     0.000400942
+***************
+this was extracted from the 1998 Magdziarz paper
