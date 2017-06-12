@@ -6,7 +6,7 @@ title magzdiarz 1997 ngc5548 one-shot
 //
 //////	Output continua
 //
-save last incident continuum "incident_continuum"
+save last incident continuum ".incident_continuum"
 //
 //////	Formatting
 //
@@ -17,7 +17,7 @@ print line faint -3
 print last
 print line precision 6
 Database print
-save line labels "line_labels"
+save line labels ".line_labels"
 //
 //////	Resolved energy states for atomic models
 //

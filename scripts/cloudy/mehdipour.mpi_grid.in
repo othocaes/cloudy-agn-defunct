@@ -6,7 +6,7 @@ title mehdipour ngc5548 hden_vs_phi 4thdex
 //
 //////	Output continua
 //
-save last incident continuum "incident_continuum"
+save last incident continuum ".incident_continuum"
 //
 //////	Formatting
 //
@@ -16,14 +16,19 @@ print line iso collapsed
 print line faint -3
 print last
 print line precision 6
+Database print
+save line labels ".line_labels"
 //
 //////	Resolved energy states for atomic models
 //
 // Defaults: 10, 10, 6
 //
-atom H-like element hydrogen resolved levels 18
-atom H-like element helium resolved levels 15
-atom He-like element helium resolved levels 15
+database H-like element hydrogen resolved levels 18
+database H-like element helium resolved levels 15
+database He-like element helium resolved levels 15
+//database H-like element hydrogen collapsed levels 30
+//database H-like element helium collapsed levels 30
+//database He-like element helium collapsed levels 40
 //
 ////// 	Prevent cloudy from stopping prematurely
 //
@@ -49,51 +54,16 @@ set nFnu add 950 angstrom
 set nFnu add 960 angstrom
 set nFnu add 1000 angstrom
 set nFnu add 1050 angstrom
-set nFnu add 1150 angstrom
-set nFnu add 1150 angstrom
-set nFnu add 1240 angstrom
-set nFnu add 1324 angstrom
-set nFnu add 1410 angstrom
-set nFnu add 1650 angstrom
-set nFnu add 1900 angstrom
-set nFnu add 2200 angstrom
-set nFnu add 2700 angstrom
-set nFnu add 3000 angstrom
-set nFnu add 3300 angstrom
-set nFnu add 3400 angstrom
-set nFnu add 3644 angstrom
-set nFnu add 3645 angstrom
-set nFnu add 3648 angstrom
-set nFnu add 4400 angstrom
-set nFnu add 5100 angstrom
-set nFnu add 5600 angstrom
-set nFnu add 6500 angstrom
-set nFnu add 7000 angstrom
-set nFnu add 7500 angstrom
-set nFnu add 8000 angstrom
-set nFnu add 8204 angstrom
-set nFnu add 8207 angstrom
-set nFnu add 8210 angstrom
-set nFnu add 8500 angstrom
-set nFnu add 9000 angstrom
-set nFnu add 9500 angstrom
-set nFnu add 10000 angstrom
-set nFnu add 10500 angstrom
-set nFnu add 11000 angstrom
-set nFnu add 13000 angstrom
-set nFnu add 800 angstrom
-set nFnu add 850 angstrom
-set nFnu add 900 angstrom
-set nFnu add 950 angstrom
-set nFnu add 1000 angstrom
-set nFnu add 1050 angstrom
 set nFnu add 1100 angstrom
 set nFnu add 1150 angstrom
 set nFnu add 1200 angstrom
+set nFnu add 1240 angstrom
 set nFnu add 1250 angstrom
 set nFnu add 1300 angstrom
+set nFnu add 1324 angstrom
 set nFnu add 1350 angstrom
 set nFnu add 1400 angstrom
+set nFnu add 1410 angstrom
 set nFnu add 1450 angstrom
 set nFnu add 1500 angstrom
 set nFnu add 1550 angstrom
@@ -138,6 +108,9 @@ set nFnu add 3450 angstrom
 set nFnu add 3500 angstrom
 set nFnu add 3550 angstrom
 set nFnu add 3600 angstrom
+set nFnu add 3644 angstrom
+set nFnu add 3645 angstrom
+set nFnu add 3648 angstrom
 set nFnu add 3650 angstrom
 set nFnu add 3700 angstrom
 set nFnu add 3750 angstrom
@@ -230,6 +203,9 @@ set nFnu add 8050 angstrom
 set nFnu add 8100 angstrom
 set nFnu add 8150 angstrom
 set nFnu add 8200 angstrom
+set nFnu add 8204 angstrom
+set nFnu add 8207 angstrom
+set nFnu add 8210 angstrom
 set nFnu add 8250 angstrom
 set nFnu add 8300 angstrom
 set nFnu add 8350 angstrom
