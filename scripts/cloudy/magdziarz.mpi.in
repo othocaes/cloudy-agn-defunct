@@ -309,7 +309,7 @@ background z = 0.0172
 //
 //////	Hydrogen density of cloud is varied
 //
-hden 11
+hden 11.5
 //hden 11 vary
 //grid range from 7 to 14 with .25 dex
 //
@@ -319,7 +319,7 @@ table SED "magdziarz1997.tab"
 //
 ////// Flux is varied
 //
-phi(h) 23
+phi(h) 21.5
 // phi(h) 23 vary
 //grid range from 17 to 24 with .25 dex
 //
