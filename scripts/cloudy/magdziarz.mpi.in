@@ -16,14 +16,15 @@ print line iso collapsed
 print line faint -3
 print last
 print line precision 6
+Database print
 //
 //////	Resolved energy states for atomic models
 //
 // Defaults: 10, 10, 6
 //
-atom H-like element hydrogen resolved levels 18
-atom H-like element helium resolved levels 15
-atom He-like element helium resolved levels 15
+database H-like element hydrogen resolved levels 18
+database H-like element helium resolved levels 15
+database He-like element helium resolved levels 15
 //
 ////// 	Prevent cloudy from stopping prematurely
 //
