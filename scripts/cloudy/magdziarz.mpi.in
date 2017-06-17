@@ -11,6 +11,8 @@ save last incident continuum ".incident_continuum"
 //////	Formatting
 //
 //print line column
+// print line column commented for testing, 
+// will print lines in a single column if uncommented
 print line inward
 print line iso collapsed
 print line faint -3
