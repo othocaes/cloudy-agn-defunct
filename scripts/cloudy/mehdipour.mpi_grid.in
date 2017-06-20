@@ -35,11 +35,22 @@ database He-like element helium resolved levels 15
 //
 set nend 5000
 //
-//////	Print diffuse continuum information in cloudy output
+//////  Print diffuse continuum information in cloudy output
 // and include additional spectral resolution around Lyman, Briggs, Etc.
 //
-// diffuse_inward can be calculated with (InwT - InwC = InwDiffuse)
+// Continuum labels by default refer to the following fields:
+//  nFnu = Total Diffuse (in & out) + Reflected Inward
+//  nInu = not of interest, described in hazy 1
+//  InwT = Inward Diffuse + Reflected Inward
+//  InwC = Reflected Inward
 //
+//      derived quantities added in Otho's program ~2017
+//  InwD = InwT - InwC = Inward Diffuse
+//  nFnD = nFnu - InwD = Total Diffuse
+//
+// "print continuum" redundant with set nFnu in c17
+//
+print continuum
 set nFnu add 800 angstrom
 set nFnu add 840 angstrom
 set nFnu add 850 angstrom
