@@ -52,7 +52,7 @@ typedef std::map<std::string,cloudy_line_data> cloudy_line_output;
 
 struct cloudy_result {
 	std::string header, footer;
-	std::list<std::string> emergent_line_raw_text;
+	std::list<std::string> intrinsic_line_raw_text;
 	std::list<std::string> intrinsic_line_raw_text;
 	std::list<std::string> cautions;
 	cloudy_line_output emergent_line_intensity;
@@ -62,7 +62,7 @@ struct cloudy_result {
 	cloudy_result():
 		header(""),
 		footer(""),
-		emergent_line_raw_text(),
+		intrinsic_line_raw_text(),
 		cautions(),
 		iterations(0),
 		phi(0),
@@ -198,6 +198,7 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 		<< std::endl;
 	agn::gridcoordlist coordlist;
 	std::pair<double,double> xy (0,0);
+	// collect parameter coordinates
 	seek_string="**************************************************";
 	while(!inputfile.eof()) {
 		while (inputline.find(seek_string) == std::string::npos)
@@ -234,10 +235,9 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 		agn::cloudy_result point;
 		point.hden = coords->first;
 		point.phi = coords->second;
-
+		seek_string = "Intrinsic line intensities";
 		if(agn::debug) std::cout
 			<< "Grabbing header and cautions.";
-		seek_string = "Intrinsic line intensities";
 		std::string header="";
 		std::list<std::string> cautions;
 		while (inputline.find(seek_string) == std::string::npos) {
@@ -284,19 +284,19 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 		point.colden = colden;
 		if(agn::debug) std::cout
 			<< " Grabbing emission lines.";
-		agn::seek_to("Emergent line intensities",inputfile);
-		std::list<std::string> emergent_line_raw_text;
+		agn::seek_to("Intrinsic line intensities",inputfile);
+		std::list<std::string> intrinsic_line_raw_text;
 		getline(inputfile,inputline);
 		while (inputline != "") {
 			if(inputline.find("..") != std::string::npos) {
 				getline(inputfile,inputline);
 				continue;
 			}
-			emergent_line_raw_text.push_back(inputline);
+			intrinsic_line_raw_text.push_back(inputline);
 			getline(inputfile,inputline);
 		}
-		point.emergent_line_raw_text.swap(emergent_line_raw_text);
-		std::list<std::string>::iterator linetext_it=point.emergent_line_raw_text.begin();
+		point.intrinsic_line_raw_text.swap(intrinsic_line_raw_text);
+		std::list<std::string>::iterator linetext_it=point.intrinsic_line_raw_text.begin();
 		std::list<std::string> duplicate_labels;
 		int index=0;
 		// For cloudy 17, the characters reserved for the output quantities:
@@ -308,20 +308,37 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 		// c17: 0,18; 18,9; 27, 10
 
 		// c13 settings
-		int str1_pos = 1;
-		int str1_len = 13;
-		int str2_pos = 14;
-		int str2_len = 8;
-		int str3_pos = 22;
-		int str3_len = 9;
+		//int labelstr_pos = 1;
+		//int labelstr_len = 13;
+		//int radiatedenergystr_pos = 14;
+		//int radiatedenergystr_len = 8;
+		//int eqwidthstr_pos = 22;
+		//int eqwidthstr_len = 9;
 
-		while(linetext_it != point.emergent_line_raw_text.end()) {
-			std::string label=(*linetext_it).substr(str1_pos,str1_len);
+		// c17 settings
+		int labelstr_pos = 0;
+		int labelstr_len = 18;
+		int radiatedenergystr_pos = 18;
+		int radiatedenergystr_len = 9;
+		int eqwidthstr_pos = 27;
+		int eqwidthstr_len = 10;
+
+		while(linetext_it != point.intrinsic_line_raw_text.end()) {
+			std::string label=(*linetext_it).substr(
+				labelstr_pos,
+				labelstr_len
+			);
 			agn::cloudy_line_data data;
 			data.index = ++index;
 			std::stringstream values;
-			data.radiated_energy = atof((*linetext_it).substr(str2_pos,str2_len).c_str());
-			data.eq_width = atof((*linetext_it).substr(str3_pos,str3_len).c_str());
+			data.radiated_energy = atof((*linetext_it).substr(
+				radiatedenergystr_pos,
+				radiatedenergystr_len).c_str()
+			);
+			data.eq_width = atof((*linetext_it).substr(
+				eqwidthstr_pos,
+				eqwidthstr_len).c_str()
+			);
 			if(line_debug) {
 				std::cout << *linetext_it 
 							<< ": " 

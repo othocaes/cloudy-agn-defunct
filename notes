@@ -15,7 +15,7 @@ Run grid with new SED, or at least a point, check values: how to find the approp
 
 
 
-    ✓   faint to equivalent width of 0.01 angstrom
+    ✓   faint to equivalent width of 0.001 angstrom
 
     ✓   compare between c13 and c17 -- show diferences in emergent line lists
 
@@ -27,9 +27,9 @@ Run grid with new SED, or at least a point, check values: how to find the approp
 
     □   check if blnds are sums of the expected multiplets
 
-    □   add in more levels to the H atom, unresolved, 20, also add some to paschen, maybe others -- check how much time is lost
+    ✓   add in more levels to the H atom, unresolved, 20, also add some to paschen, maybe others -- check how much time is lost
 
-    □   punch the paschen and balmer lines up to 18
+    ✓   punch the paschen and balmer lines up to 18
 
     □   Read Intrinsic Lines
 
@@ -37,7 +37,7 @@ Run grid with new SED, or at least a point, check values: how to find the approp
 
     □   Contour plots
 
-    □   Run Grids in c17
+    ✓   Run Grids in c17
 
     □   Email about order of lines
 
