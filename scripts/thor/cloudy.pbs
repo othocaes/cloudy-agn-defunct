@@ -2,12 +2,12 @@
 #PBS -l mem=128GB
 #PBS -l nodes=4:ppn=16:research
 #PBS -l walltime=169:00:00
-#PBS -N cldn23_mehdipour
+#PBS -N SED_cd22_.5sol                                                                                                                                                   
 #PBS -j oe
 
 
-RUN_FILE="mpi"
-RUN_DIR="cloudy/runs/c17/mehdipour/grids/4thdex/cldn_23.00"
+RUN_FILE="mpi_grid"
+RUN_DIR="cloudy/runs/c17/SED/grids/4thdex/halfsolar/cldn_22.00"                                                                                                     
 
 num_proc=$(cat ${PBS_NODEFILE} | wc -l)
 
