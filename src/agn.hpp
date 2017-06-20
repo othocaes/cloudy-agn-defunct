@@ -53,7 +53,7 @@ typedef std::map<std::string,cloudy_line_data> cloudy_line_output;
 struct cloudy_result {
 	std::string header, footer;
 	std::list<std::string> intrinsic_line_raw_text;
-	std::list<std::string> intrinsic_line_raw_text;
+	std::list<std::string> emergent_line_raw_text; // Not currently collected
 	std::list<std::string> cautions;
 	cloudy_line_output emergent_line_intensity;
 	cloudy_line_output intrinsic_line_intensity;
