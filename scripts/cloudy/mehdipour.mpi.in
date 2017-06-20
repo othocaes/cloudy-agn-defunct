@@ -33,6 +33,10 @@ database He-like element helium resolved levels 15
 //database H-like element helium collapsed levels 30
 //database He-like element helium collapsed levels 40
 //
+//////  low-metal abundance for AGN testing ~2017
+// metals 0.5
+// element scale factor carbon 2
+//
 ////// 	Prevent cloudy from stopping prematurely
 //
 set nend 5000
