@@ -34,13 +34,13 @@ int main(int argc, char const *argv[]) {
     zeroreport << "These headers were pulled from tables"
                 << " that returned minimum values."
                 << std::endl;
-    int zeroes=0;
+    int num_zeroes=0;
     while(table_it != tables.end()) {
         if(agn::is_zero(*table_it)) {
             zeroreport << " "
                         << table_it->header[0]
                         << std::endl;
-            zeroes++;
+            num_zeroes++;
             table_it = tables.erase(table_it);
             continue;
         }
@@ -48,7 +48,7 @@ int main(int argc, char const *argv[]) {
     table_it++;
     }
     std::cout << "Removed "
-            << zeroes
+            << num_zeroes
             << " tables from the list because"
             << " they had zero value."
             << std::endl;

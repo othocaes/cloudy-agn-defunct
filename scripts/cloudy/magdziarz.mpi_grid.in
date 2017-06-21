@@ -4,9 +4,10 @@ title magdziarz 1997 hden_vs_phi .25 dex
 //
 // single run copied from the standard magdziarz grid
 //
-//////	Output continua
+//////  Output continua and included lines
 //
-save last incident continuum ".incident_continuum"
+save last incident continuum "incident_continuum"
+save line labels "line_labels"
 //
 //////	Formatting
 //
@@ -18,7 +19,6 @@ print last
 print line precision 6
 print line iso collapsed on
 Database print
-save line labels ".line_labels"
 //
 //////	Resolved energy states for atomic models
 //

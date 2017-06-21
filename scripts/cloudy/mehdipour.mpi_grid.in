@@ -4,11 +4,12 @@ title mehdipour ngc5548 hden_vs_phi 4thdex
 //
 // single run copied from the standard mehdipour grid
 //
-//////	Output continua
+//////	Output continua and included lines
 //
-save last incident continuum ".incident_continuum"
+save last incident continuum "incident_continuum"
+save line labels "line_labels"
 //
-//////	Formatting
+//////  Formatting
 //
 print line column
 print line inward
@@ -18,7 +19,6 @@ print last
 print line precision 6
 print line iso collapsed on
 Database print
-save line labels ".line_labels"
 //
 //////	Resolved energy states for atomic models
 //
