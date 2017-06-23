@@ -17,7 +17,7 @@
 
 namespace agn {
 
-const bool debug = false;
+const bool debug = true;
 const bool line_debug = false;
 
 // General constants
