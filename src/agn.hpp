@@ -74,7 +74,7 @@ struct cloudy_result {
 typedef std::map<coord2d,cloudy_result> cloudy_grid;
 
 //	Easiest to read the entire grid from the file at once.
-cloudy_grid read_cloudy_grid(std::ifstream&,agn::line_list);
+cloudy_grid read_cloudy_grid(std::ifstream&);
 
 //	Operator<< prints general info about the run result.
 std::ostream& operator<< (std::ostream&, cloudy_result);
@@ -166,15 +166,15 @@ std::ostream& agn::operator<< (std::ostream& outstream, cloudy_result output) {
 	return outstream;
 }
 
-//std::ifstream& operator>> (std::ifstream& inputfile,agn::cloudy_grid& grid) {
-//	grid = agn::read_cloudy_grid(inputfile);
-//	return inputfile;
-//}
+std::ifstream& operator>> (std::ifstream& inputfile,agn::cloudy_grid& grid) {
+	grid = agn::read_cloudy_grid(inputfile);
+	return inputfile;
+}
 
 
 
 
-agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile, agn::line_list lines_to_print) {
+agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 	if(agn::debug) std::cout
 		<< "Constructing cloudy output grid from file.\n";
 	inputfile.clear();

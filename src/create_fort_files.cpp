@@ -18,7 +18,7 @@ int main(int argc, char const *argv[]) {
 		<< "Reading cloudy grid from "
 		<< argv[1]
 		<< ".\n";
-	agn::cloudy_grid grid = agn::read_cloudy_grid(cloudy_result_file, lines_to_print);
+	agn::cloudy_grid grid = agn::read_cloudy_grid(cloudy_result_file);
 
 	std::cout
 		<< "Compiling table2ds for "
