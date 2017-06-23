@@ -74,7 +74,7 @@ struct cloudy_result {
 typedef std::map<coord2d,cloudy_result> cloudy_grid;
 
 //	Easiest to read the entire grid from the file at once.
-cloudy_grid read_cloudy_grid(std::ifstream&);
+cloudy_grid read_cloudy_grid(std::ifstream&,line_list);
 
 //	Operator<< prints general info about the run result.
 std::ostream& operator<< (std::ostream&, cloudy_result);
