@@ -18,7 +18,7 @@
 namespace agn {
 
 const bool debug = true;
-const bool line_debug = true;
+const bool line_debug = false;
 
 // General constants
 const double PI=3.14159265358979323846;
@@ -174,7 +174,7 @@ std::ifstream& operator>> (std::ifstream& inputfile,agn::cloudy_grid& grid) {
 
 
 
-agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
+agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile, agn::line_list lines_to_print) {
 	if(agn::debug) std::cout
 		<< "Constructing cloudy output grid from file.\n";
 	inputfile.clear();
@@ -400,5 +400,5 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 }
 
 
-
+o
 #endif

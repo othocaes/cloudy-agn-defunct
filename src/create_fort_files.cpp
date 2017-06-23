@@ -10,7 +10,7 @@ int main(int argc, char const *argv[]) {
 		<< "Reading cloudy grid from "
 		<< argv[1]
 		<< ".\n";
-	agn::cloudy_grid grid = agn::read_cloudy_grid(cloudy_result_file);
+	agn::cloudy_grid grid = agn::read_cloudy_grid(cloudy_result_file, lines_to_print);
 
 	std::cout
 		<< "Reading line list from "
