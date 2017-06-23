@@ -199,6 +199,7 @@ agn::line_list agn::read_line_list(std::ifstream& inputfile) {
 			label = line.substr(1,18);
 		else
 			label = line.substr(0,18);
+        // above is only good for c17?
 		if(agn::debug) std::cout
 			<< "Adding label "
 			<< label

@@ -49,7 +49,7 @@ Run grid with new SED, or at least a point, check values: how to find the approp
 
     check hazy for RRC H  1 meaning
 
-    c  3  1175->538, seen twice?
+    c  3  1175->538, seen twice? -- looked again, I don't see that now
 
     2 TOTL lines -> He 1   
 
@@ -63,43 +63,58 @@ use notes from paper to design contour plots
 
 what is the right way to model the components? check mehdipour and magdziarz paper, and comptonization paper
 
-more?
 
+    other codes
+    ─────────────
 
-
-how many collapsed levels do we have?
-
-15 for H⁰ and He⁺, 2 for everything else
-
-
-other codes:
-
-mappings, ion, X-STAR
-
-
-
-print iso collapsed  ✓
+    mappings, ion, X-STAR
 
 
 include lines:
 
 8205A
 
-BAC 3646
-
-BAC 0
-
-Pac 0
-
-
 hapsed lines
 
+BAC 3646 ✓
+
+BAC 0 ✓
+
+Pac 0 ✓
 
 
 
-print line cutoff reduced to  -- nevermind
+lines not found:
+
+TOTL 1.08299m
+He 1 1.08291m # 1S1 to 3P0 <
+He 1 1.08303m # 1S1 to 3P1 <
+He 1 1.08303m # 1S1 to 3P2
+He 1 3888.63A
+
+Ca2K      3934.00A
+Ca2H      3969.00A
+Ca2X      8498.00A
+Ca2Y      8542.00A
+Ca2Z      8662.00A
 
 
 
+Fe 2      1500.00A
+Fe 2      1.15000m
+Fe 2      2500.00A
+Fe 2      2300.00A
+Fe 2      8900.00A
+Fe 2      1786.00A
+Fe 3      1125.79A
 
 
+Missing blend for Ne 5  ~1142A
+
+No good matches for these, included closest ones
+
+    Si 2      1813.99A
+    Si 2      1531.00A
+    Si 2      1307.66A
+    Si 2      1263.32A
+    Si 3      1207.00A
