@@ -264,7 +264,7 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 			}
 		}
 		if(agn::debug) std::cout
-			<< " Found " << iterations << "iterations.";
+			<< " Found " << iterations << " iterations.";
 		point.iterations = iterations;
 		headerstr.clear();
 		headerstr.seekg(0);
