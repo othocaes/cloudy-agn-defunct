@@ -18,7 +18,7 @@
 namespace agn {
 
 const bool debug = true;
-const bool line_debug = false;
+const bool line_debug = true;
 
 // General constants
 const double PI=3.14159265358979323846;
