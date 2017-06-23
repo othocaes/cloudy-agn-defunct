@@ -18,7 +18,7 @@ cd fortfiles
 # pwd
 
 echo "Directory ready. Calling fort file creation."
-$bin_dir/create_fort_files ../mpi_grid.out $script_dir/../reference/linelist
+$bin_dir/create_fort_files ../mpi_grid.out $script_dir/../reference/linelist.c17
 
 inwTfortnums=$(grep 'InwT' fort.*|sed 's@^fort\.\([0-9]\+\):InwT.*@\1@'|sort -nr)
 echo "Generating inward diffuse tables for $(echo "$inwTfortnums"|wc -l) coordinates."
