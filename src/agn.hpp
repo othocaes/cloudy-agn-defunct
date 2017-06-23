@@ -255,8 +255,6 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 		std::string headerword="";
 		headerstr.clear();
 		headerstr.seekg(0);
-		if(agn::debug) std::cout
-			<< " Grabbing iterations.";
 		int iterations;
 		while(!headerstr.eof()) {
 			headerstr >> headerword;
@@ -265,11 +263,11 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 				break;
 			}
 		}
+		if(agn::debug) std::cout
+			<< " Found " << iterations << "iterations.";
 		point.iterations = iterations;
 		headerstr.clear();
 		headerstr.seekg(0);
-		if(agn::debug) std::cout
-			<< " Grabbing colden.";
 		double colden;
 		while(!headerstr.eof()) {
 			headerstr >> headerword;
@@ -281,6 +279,8 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 				}
 			}
 		}
+		if(agn::debug) std::cout
+			<< " Found 10^"<<colden<<" colden.";
 		point.colden = colden;
 		if(agn::debug) std::cout
 			<< " Grabbing emission lines.";
