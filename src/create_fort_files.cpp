@@ -6,20 +6,19 @@ int main(int argc, char const *argv[]) {
 	std::ifstream cloudy_result_file;
 	cloudy_result_file.open(argv[1]);
 
-    std::cout
-        << "Reading line list from "
-        << argv[2]
-        << ".\n";
-    std::ifstream line_list_file;
-    line_list_file.open(argv[2]);
-    agn::line_list lines_to_print = agn::read_line_list(line_list_file);
-
 	std::cout
 		<< "Reading cloudy grid from "
 		<< argv[1]
 		<< ".\n";
 	agn::cloudy_grid grid = agn::read_cloudy_grid(cloudy_result_file);
 
+	std::cout
+		<< "Reading line list from "
+		<< argv[2]
+		<< ".\n";
+	std::ifstream line_list_file;
+	line_list_file.open(argv[2]);
+	agn::line_list lines_to_print = agn::read_line_list(line_list_file);
 	std::cout
 		<< "Compiling table2ds for "
 		<< lines_to_print.size()
