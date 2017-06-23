@@ -400,5 +400,5 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 }
 
 
-o
+
 #endif
