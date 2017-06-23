@@ -166,10 +166,10 @@ std::ostream& agn::operator<< (std::ostream& outstream, cloudy_result output) {
 	return outstream;
 }
 
-std::ifstream& operator>> (std::ifstream& inputfile,agn::cloudy_grid& grid) {
-	grid = agn::read_cloudy_grid(inputfile);
-	return inputfile;
-}
+//std::ifstream& operator>> (std::ifstream& inputfile,agn::cloudy_grid& grid) {
+//	grid = agn::read_cloudy_grid(inputfile);
+//	return inputfile;
+//}
 
 
 
