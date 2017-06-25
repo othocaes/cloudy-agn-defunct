@@ -5,17 +5,13 @@
 # Program searches intrinsic lines
 
 #two incident continuum points
-Inci      4860.00A      incident continuum nu*f_nu at H-beta, at illuminated face of cloud 
 Inci      1215.00A      incident continuum nu*f_nu near Ly-alpha, at illuminated face of cloud
+Inci      4860.00A      incident continuum nu*f_nu at H-beta, at illuminated face of cloud 
 
 #Some informative quantities
 Bac       3646.00A      residual flux at head of Balmer continuum, nuFnu 
 Ba C            0       integrated Balmer continuum emission
 PA C            0       Paschen continuum emission 
-
-#Hydrogen lines
-#H  1            0       two photon continuum, H-like, 1 2,   1^2S -   2^2S
-#H  1      22.0000A      induced two photon emission, H-like, 1 2,   1^2S -   2^2S
 
 # Lyman
 # Can't find an equivalent to TOTL 1215A in c17
@@ -78,8 +74,6 @@ H  1      2.16551m      H-like, 7 23,   4^2S -   7^2P
 
 
 #He II lines:
-#He 2            0       two photon continuum, H-like, 1 2,   1^2S -   2^2S
-#He 2      22.0000A      induced two photon emission, H-like, 1 2,   1^2S -   2^2S
 
 #Balmer
 He 2      1640.43A      H-like, 2 5,   2^2S -   3^2P
@@ -116,7 +110,7 @@ He 1      1.08303m      He-like, 2 4,   2^3S -   2^3P
 # Have not been able to find equivalents
 # for all parts of this triplet in c17
 
-#He 1      8863.66A      He-like, 2 7,   2^3S -   2^1P_1
+He 1      8863.66A      He-like, 2 7,   2^3S -   2^1P_1
 He 1      3888.63A      He-like, 2 10,   2^3S -   3^3P
 He 1      3793.50A      He-like, 2 13,   2^3S -   3^1P_1
 
@@ -143,42 +137,37 @@ He 1      4168.97A      He-like, 7 33,   2^1P_1 -   6^1S
 
 #Heavy Element Lines:
 Blnd      1657.00A      Blend: "C  1      1657.01A"+"C 1R      1656.00A"
-C  1      1657.01A      Stout, 3 9
-#C 1R      1656.00A
-
-C  1      1656.27A      Stout, 2 9
-C  1      1656.93A      Stout, 1 8
+#C  1      1657.01A      Stout, 3 9
+#C  1      1656.27A      Stout, 2 9
+#C  1      1656.93A      Stout, 1 8
 
 Blnd      2326.00A      Blend: "C  2      2324.69A"+"C  2      2323.50A"+"C  2      2328.12A"+"C  2      2326.93A"+"C  2      2325.40A"+"C 2H      2326.00A"
-C  2      2323.50A      Stout, 1 4
-C  2      2324.69A      Stout, 1 3
-C  2      2325.40A      Stout, 2 5
-C  2      2328.12A      Stout, 2 3
-C  2      2326.93A      Stout, 2 4
+#C  2      2323.50A      Stout, 1 4
+#C  2      2324.69A      Stout, 1 3
+#C  2      2325.40A      Stout, 2 5
+#C  2      2328.12A      Stout, 2 3
+#C  2      2326.93A      Stout, 2 4
 
 Blnd      1335.00A      Blend: "C  2      1334.53A"+"C  2      1335.66A"+"C  2      1335.71A"+"C 2R      1335.00A"
-C  2      1334.53A      Stout, 1 7
-C  2      1335.66A      Stout, 2 7
-C  2      1335.71A      Stout, 2 6
+#C  2      1334.53A      Stout, 1 7
+#C  2      1335.66A      Stout, 2 7
+#C  2      1335.71A      Stout, 2 6
 
 C  3      977.000A      recombination line
 
 Blnd      1909.00A      Blend: "C  3      1908.73A"+"C  3      1906.68A"+"C 3R      1909.00A"+"C 3H      1909.00A"
-C  3      1908.73A      Stout, 1 3
-C  3      1906.68A      Stout, 1 4
-
-C  3      1176.77A      Stout, 4 6
-C  3      1176.37A      Stout, 4 7
+#C  3      1908.73A      Stout, 1 3
+#C  3      1906.68A      Stout, 1 4
 
 Blnd      1176.00A      Blend: "C  3      1174.61A"+"C  3      1174.93A"+"C  3      1175.26A"+"C  3      1175.59A"+"C  3      1175.71A"+"C  3      1175.99A"+"C  3      1176.37A"+"C  3      1176.77A"+"C 3R      1175.00A"
-C  3      1175.26A      Stout, 2 7
-C  3      1174.61A      Stout, 2 8
-C  3      1175.99A      Stout, 3 6
-C  3      1175.59A      Stout, 3 7
-C  3      1174.93A      Stout, 3 8
-C  3      1176.77A      Stout, 4 6
-C  3      1176.37A      Stout, 4 7
-C  3      1175.71A      Stout, 4 8
+#C  3      1175.26A      Stout, 2 7
+#C  3      1174.61A      Stout, 2 8
+#C  3      1175.99A      Stout, 3 6
+#C  3      1175.59A      Stout, 3 7
+#C  3      1174.93A      Stout, 3 8
+#C  3      1176.77A      Stout, 4 6
+#C  3      1176.37A      Stout, 4 7
+#C  3      1175.71A      Stout, 4 8
 
 Blnd      1549.00A      Blend: "C  4      1550.78A"+"C  4      1548.19A"+"C 4R      1549.00A"+"C 4R      1549.00A"
 C  4      1550.78A
@@ -188,16 +177,16 @@ N  1      1200.22A      Stout, 1 7
 N  1      1200.71A      Stout, 1 6
 
 Blnd      2141.00A      Blend: "N  2      2139.01A"+"N  2      2142.78A"
-N  2      2139.01A
-N  2      2142.78A
+#N  2      2139.01A
+#N  2      2142.78A
 
 Blnd      1085.00A      Blend: "N  2      1083.99A"+"N  2      1084.56A"+"N  2      1084.58A"+"N  2      1085.53A"+"N  2      1085.55A"+"N  2      1085.70A"+"N 2R      1085.00A"
-N  2      1083.99A
-N  2      1084.56A
-N  2      1084.58A
-N  2      1085.53A
-N  2      1085.55A
-N  2      1085.70A
+#N  2      1083.99A
+#N  2      1084.56A
+#N  2      1084.58A
+#N  2      1085.53A
+#N  2      1085.55A
+#N  2      1085.70A
 #N 2R      1085.00A
 
 Blnd      1750.00A      Blend: "N  3      1746.82A"+"N  3      1748.65A"+"N  3      1749.67A"+"N  3      1752.16A"+"N  3      1753.99A"
@@ -207,19 +196,18 @@ N  3      1749.67A
 N  3      1752.16A
 N  3      1753.99A
 
-
 Blnd      990.000A      Blend: "N  3      989.799A"+"N  3      991.511A"+"N  3      991.577A"+"N 3R      990.000A"
-N  3      989.799A
-N  3      991.511A
-N  3      991.577A
+#N  3      989.799A
+#N  3      991.511A
+#N  3      991.577A
 #N 3R      990.000A
 
 Blnd      1486.00A      Blend: "N  4      1483.32A"+"N  4      1486.50A"
-N  4      1483.32A
-N  4      1486.50A
+#N  4      1483.32A
+#N  4      1486.50A
 
 Blnd      765.000A      Blend: "N  4      765.147A"+"N 4R      765.000A"
-N  4      765.147A
+#N  4      765.147A
 #N 4R      765.000A
 
 Blnd      1240.00A      Blend: "N  5      1238.82A"+"N  5      1242.80A"
@@ -232,9 +220,9 @@ O  1      1304.86A
 O  1      1306.03A
 
 Blnd      8446.00A              Blend: "O  1      8446.25A"+"O  1      8446.36A"+"O  1      8446.76A"
-O  1      8446.25A
-O  1      8446.36A
-O  1      8446.76A
+#O  1      8446.25A
+#O  1      8446.36A
+#O  1      8446.76A
 
 Blnd      1666.00A              Blend: "O  3      1666.15A"+"O  3      1660.81A"+"O 3H      1665.00A"+"O 3A      1665.00A"
 O  3      1666.15A
@@ -242,14 +230,13 @@ O  3      1660.81A
 #O 3H      1665.00A
 #O 3A      1665.00A
 
-
 Blnd      835.000A              Blend: "O  3      832.929A"+"O  3      833.715A"+"O  3      833.749A"+"O  3      835.059A"+"O  3      835.092A"+"O  3      835.289A"+"O 3R      835.000A"
-O  3      832.929A
-O  3      833.715A
-O  3      833.749A
-O  3      835.059A
-O  3      835.092A
-O  3      835.289A
+#O  3      832.929A
+#O  3      833.715A
+#O  3      833.749A
+#O  3      835.059A
+#O  3      835.092A
+#O  3      835.289A
 #O 3R      835.000A
 
 Blnd      1402.00A              Blend: "O  4      1397.20A"+"O  4      1399.77A"+"O  4      1401.16A"+"O  4      1404.78A"+"O  4      1407.38A"+"O 4H      1401.00A"
@@ -261,20 +248,16 @@ O  4      1407.38A
 #O 4H      1401.00A
 
 Blnd      630.000A              Blend: "O  5      629.732A"+"O 5R      630.000A"
-O  5      629.732A
+#O  5      629.732A
 #O 5R      630.000A
 
 Blnd      1218.00A              Blend: "O  5      1213.81A"+"O  5      1218.34A"
-O  5      1213.81A
-O  5      1218.34A
+#O  5      1213.81A
+#O  5      1218.34A
 
 Blnd      1035.00A              Blend: "O  6      1031.91A"+"O  6      1037.62A"
 O  6      1031.91A
 O  6      1037.62A
-
-Blnd      1240.00A              Blend: "N  5      1238.82A"+"N  5      1242.80A"
-N  5      1238.82A
-N  5      1242.80A
 
 Ne 5      1136.51A              Chianti, 2 6
 Ne 5      1145.60A              Chianti, 3 6
@@ -321,10 +304,9 @@ Si 2      1264.74A              Stout, 2 11
 Si 2      1236.03A              Stout, 2 12
 Si 2      1235.12A              Stout, 2 13
 
-
 Blnd      1888.00A              Blend: "Si 3      1882.71A"+"Si 3      1892.03A"
-Si 3      1882.71A
-Si 3      1892.03A
+#Si 3      1882.71A
+#Si 3      1892.03A
 
 Blnd      1397.00A              Blend: "Si 4      1393.75A"+"Si 4      1402.77A"
 Si 4      1393.75A
@@ -345,7 +327,6 @@ S  3      1190.20A
 S  3      1194.06A
 S  3      1194.45A
 S  3      1200.97
-
 S  3      1201.73A
 S  3      1202.12A
 
@@ -354,7 +335,6 @@ S  4      1404.81A
 S  4      1398.04A
 S  4      1423.84A
 S  4      1416.89
-
 S  4      1406.02A
 
 Blnd      1199.00A              Blend: "S  5      1199.14A"+"S  5      1188.28A"
@@ -379,26 +359,25 @@ Blnd      3933.00A      Blend: "Ca 2      3933.66A"+"Ca 2      3968.47A"
 Ca 2      3933.66A
 Ca 2      3968.47A
 
-
 FeKa      1.78000A              total intensity of K-alpha line
-
 
 
 #Diffuse continua:
 # Program knows to check for nInu, etc. as well
 nFnu      3645.00A      total flux above head of Balmer continuum, nuFnu 
-nFnu      3647.00A      total flux above head of Balmer continuum, nuFnu 
-nFnu      23.5131c      total continuum at selected energy points 
-nFnu      20.4636c      total continuum at selected energy points 
-nFnu      6.61064c      total continuum at selected energy points 
-nFnu      6.13700c      total continuum at selected energy points 
-nFnu      3.55415c      total continuum at selected energy points 
-nFnu      3.43208c      total continuum at selected energy points 
-nFnu      3.40000c      total continuum at selected energy points 
-nFnu      2.00329c      total continuum at selected energy points 
-nFnu      1.33478c      total continuum at selected energy points 
-nFnu      9993.08m      total continuum at selected energy points 
-nFnu      6917.22m      total continuum at selected energy points 
+nFnu      3647.00A      total flux above head of Balmer continuum, nuFnu
+# standard Cloudy continuum bins
+#nFnu      23.5131c      total continuum at selected energy points 
+#nFnu      20.4636c      total continuum at selected energy points 
+#nFnu      6.61064c      total continuum at selected energy points 
+#nFnu      6.13700c      total continuum at selected energy points 
+#nFnu      3.55415c      total continuum at selected energy points 
+#nFnu      3.43208c      total continuum at selected energy points 
+#nFnu      3.40000c      total continuum at selected energy points 
+#nFnu      2.00329c      total continuum at selected energy points 
+#nFnu      1.33478c      total continuum at selected energy points 
+#nFnu      9993.08m      total continuum at selected energy points 
+#nFnu      6917.22m      total continuum at selected energy points 
 nFnu      122.400m      total continuum at selected energy points 
 nFnu      60.8322m      total continuum at selected energy points 
 nFnu      41.2152m      total continuum at selected energy points 
@@ -462,6 +441,7 @@ nFnu      575.146A      total continuum at selected energy points
 nFnu      511.948A      total continuum at selected energy points 
 nFnu      496.874A      total continuum at selected energy points 
 nFnu      399.153A      total continuum at selected energy points 
+# additional bins
 nFnu      800.000A      total continuum at selected energy points 
 nFnu      840.000A      total continuum at selected energy points 
 nFnu      850.000A      total continuum at selected energy points 

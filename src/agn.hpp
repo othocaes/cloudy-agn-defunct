@@ -17,7 +17,7 @@
 
 namespace agn {
 
-const bool debug = true;
+const bool debug = false;
 const bool line_debug = false;
 
 // General constants
@@ -231,6 +231,7 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 		<< " coordinate pairs found.\n";
 	agn::cloudy_grid grid;
 	agn::gridcoordlist::iterator coords = coordlist.begin();
+
 	while(grid.size() < coordlist.size()) {
 		agn::cloudy_result point;
 		point.hden = coords->first;
@@ -258,6 +259,7 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 		int iterations;
 		while(!headerstr.eof()) {
 			headerstr >> headerword;
+			//std::cout << "looking for iterations in " << headerword << "\n";
 			if(headerword == "Iteration") {
 				headerstr >> iterations;
 				break;
@@ -271,20 +273,22 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 		double colden;
 		while(!headerstr.eof()) {
 			headerstr >> headerword;
+			//std::cout << "checking "<<headerword<<"\n";
 			if(headerword == "column") {
 				headerstr >> headerword;
+				//std::cout << "found "<<headerword;
 				if(headerword == "density") {
 					headerstr >> colden;
 					break;
 				}
 			}
 		}
-		if(agn::debug) std::cout
+		if(agn::debug) std::cout << std::setprecision(2)
 			<< " Found 10^"<<colden<<" colden.";
 		point.colden = colden;
 		if(agn::debug) std::cout
 			<< " Grabbing emission lines.";
-		agn::seek_to("Intrinsic line intensities",inputfile);
+		agn::seek_to("general properties...................",inputfile);
 		std::list<std::string> intrinsic_line_raw_text;
 		getline(inputfile,inputline);
 		while (inputline != "") {
@@ -330,23 +334,33 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 			);
 			agn::cloudy_line_data data;
 			data.index = ++index;
-			std::stringstream values;
-			data.radiated_energy = atof((*linetext_it).substr(
-				radiatedenergystr_pos,
-				radiatedenergystr_len).c_str()
-			);
-			data.eq_width = atof((*linetext_it).substr(
-				eqwidthstr_pos,
-				eqwidthstr_len).c_str()
-			);
+			//std::stringstream values;
+			//data.radiated_energy = atof((*linetext_it).substr(
+			//	radiatedenergystr_pos,
+			//	radiatedenergystr_len).c_str()
+			//);
+			//data.eq_width = atof((*linetext_it).substr(
+			//	eqwidthstr_pos,
+			//	eqwidthstr_len).c_str()
+			//);
 			if(line_debug) {
-				std::cout << *linetext_it 
+				std::cout 
+							<< std::setprecision(5)
+							<< *linetext_it 
 							<< ": " 
 							<< label 
 							<< "; "
 							<< data.radiated_energy
+							<< " from "
+							<< (*linetext_it).substr(
+									radiatedenergystr_pos,
+									radiatedenergystr_len).c_str()
 							<< "; "
 							<< data.eq_width
+							<< " from "
+							<< (*linetext_it).substr(
+									eqwidthstr_pos,
+									eqwidthstr_len).c_str()
 							<< "\n";
 			}
 			if(point.emergent_line_intensity.count(label) == 0) {
@@ -386,12 +400,29 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 			getline(inputfile,inputline);
 		}
 		if(agn::debug) std::cout
-			<< "\nAdding point to grid: "
+			<< "\nAdding point to grid (size "
+			<< grid.size()
+			<< " of "
+			<< coordlist.size()
+			<< ") at "
+			<< coords->first
+			<< ": "
 			<< point
 			<< std::endl;
 		grid[*coords] = point;
 		coords++;
+		//if(agn::debug) std::cout << "yo!";
+		//std::cout << "bye" << coords->first;
+		//if(agn::debug) std::cout
+		//	<< std::setprecision(2)
+		//	<< "Moving to "
+		//	<< coords->first
+		//	<< "x"
+		//	<< coords->second
+		//	<< " me?"
+		//	<< std::endl;
 	}
+
 	if(agn::debug) std::cout
 		<< "Grid captured. "
 		<< grid.size()

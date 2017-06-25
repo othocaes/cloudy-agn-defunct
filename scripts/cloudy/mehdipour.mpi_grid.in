@@ -216,6 +216,7 @@ set nFnu add 8100 angstrom
 set nFnu add 8150 angstrom
 set nFnu add 8200 angstrom
 set nFnu add 8204 angstrom
+set nFnu add 8205 angstrom
 set nFnu add 8207 angstrom
 set nFnu add 8210 angstrom
 set nFnu add 8250 angstrom
