@@ -37,6 +37,15 @@ int main(int argc, char const *argv[]) {
     int num_zeroes=0;
     while(table_it != tables.end()) {
         if(agn::is_zero(*table_it)) {
+            std::string linetype = table_it->header[0].substr(0,4);
+            if (linetype == "nFnu" ||
+                linetype == "nInu" ||
+                linetype == "InwT" ||
+                linetype == "InwC") {
+                table_it++;
+                continue;
+            }
+
             zeroreport << " "
                         << table_it->header[0]
                         << std::endl;

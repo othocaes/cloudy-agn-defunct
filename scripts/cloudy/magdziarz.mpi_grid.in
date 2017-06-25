@@ -50,7 +50,7 @@ set nend 5000
 //
 //      derived quantities added in Otho's program ~2017
 //  InwD = InwT - InwC = Inward Diffuse
-//  nFnD = nFnu - InwD = Total Diffuse
+//  nFnD = nFnu - InwC = Total Diffuse
 //
 // "print continuum" redundant with set nFnu in c17
 //

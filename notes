@@ -23,15 +23,15 @@ Run grid with new SED, or at least a point, check values: how to find the approp
 
     ✓   run models for comparising: 10.5,19.5
 
-    □   Why so many Fe 2 lines?
+    ✓   Why so many Fe 2 lines?
 
-    □   check if blnds are sums of the expected multiplets
+    ✓   check if blnds are sums of the expected multiplets
 
     ✓   add in more levels to the H atom, unresolved, 20, also add some to paschen, maybe others -- check how much time is lost
 
     ✓   punch the paschen and balmer lines up to 18
 
-    □   Read Intrinsic Lines
+    ✓   Read Intrinsic Lines
 
     □   Smoothing algorithm using n-dimensional smoothing
 
@@ -39,9 +39,9 @@ Run grid with new SED, or at least a point, check values: how to find the approp
 
     ✓   Run Grids in c17
 
-    □   Email about order of lines
+    ✓   Email about order of lines
 
-    □   Find blend correlated names and update
+    ✓   Find blend correlated names and update
 
 
 

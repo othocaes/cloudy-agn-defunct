@@ -335,14 +335,14 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 			agn::cloudy_line_data data;
 			data.index = ++index;
 			//std::stringstream values;
-			//data.radiated_energy = atof((*linetext_it).substr(
-			//	radiatedenergystr_pos,
-			//	radiatedenergystr_len).c_str()
-			//);
-			//data.eq_width = atof((*linetext_it).substr(
-			//	eqwidthstr_pos,
-			//	eqwidthstr_len).c_str()
-			//);
+			data.radiated_energy = atof((*linetext_it).substr(
+				radiatedenergystr_pos,
+				radiatedenergystr_len).c_str()
+			);
+			data.eq_width = atof((*linetext_it).substr(
+				eqwidthstr_pos,
+				eqwidthstr_len).c_str()
+			);
 			if(line_debug) {
 				std::cout 
 							<< std::setprecision(5)
@@ -400,7 +400,7 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 			getline(inputfile,inputline);
 		}
 		if(agn::debug) std::cout
-			<< "\nAdding point to grid (size "
+			<< "\nAdding point to grid ("
 			<< grid.size()
 			<< " of "
 			<< coordlist.size()
