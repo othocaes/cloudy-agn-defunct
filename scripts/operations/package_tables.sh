@@ -12,6 +12,13 @@ base_dir=`pwd`
 bin_dir="$script_dir/../bin"
 
 griddir=$1
+grid_id=$(echo ${griddir}|sed 's@^\.\/\(.*\)@\1@'|sed 's@.grids@@'|sed 's@\/@.@g')
+
+if [[ -e "${grid_id}.tar.gz" ]]; then
+    echo "package exists"
+    exit 5
+fi
+
 cd $griddir
 mkdir -p fortfiles
 cd fortfiles

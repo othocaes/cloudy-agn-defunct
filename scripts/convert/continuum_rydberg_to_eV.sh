@@ -7,16 +7,10 @@
 
 
 
-continuum_file_orig=$1
-continuum_file_new=hnuineV.$continuum_file_orig
-
-
-
-while read photon_energy_in_ryd everything_else; do
+while read -r rydbergs sed1 sed2
+do
     # 1 Ryd = 13.60569253 eV
-    photon_energy_in_eV=`bc <<< "$photon_energy_in_ryd * 13.60569253"
-    echo $photon_energy_in_eV $everything_else`
-done < $continuum_file_orig
-
-
+    eV=$(bc <<< "$rydbergs * 13.60569253")
+    echo "$eV $sed1 $sed2"
+done
 
