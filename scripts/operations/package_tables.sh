@@ -18,7 +18,7 @@ if [[ -e "${grid_id}.tar.gz" ]]; then
     echo "package exists"
     exit 5
 else
-    echo "Package Doesn't exist."
+    echo "${grid_id}.tar.gz Doesn't exist."
 fi
 
 cd $griddir
