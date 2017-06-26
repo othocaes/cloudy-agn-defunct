@@ -17,6 +17,8 @@ grid_id=$(echo ${griddir}|sed 's@^\.\/\(.*\)@\1@'|sed 's@.grids@@'|sed 's@\/@.@g
 if [[ -e "${grid_id}.tar.gz" ]]; then
     echo "package exists"
     exit 5
+else
+    echo "Package Doesn't exist."
 fi
 
 cd $griddir
