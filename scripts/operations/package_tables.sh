@@ -15,10 +15,10 @@ griddir=$1
 grid_id=$(echo ${griddir}|sed 's@^\.\/\(.*\)@\1@'|sed 's@.grids@@'|sed 's@\/@.@g')
 
 if [[ -e "fortfiles_${grid_id}.tar.gz" ]]; then
-    echo "package exists"
+    echo "Package fortfiles_${grid_id}.tar.gz exists."
     exit 5
 else
-    echo "fortfiles_${grid_id}.tar.gz Doesn't exist."
+    echo "Setting up to compile fortfiles_${grid_id}.tar.gz."
 fi
 
 cd $griddir
