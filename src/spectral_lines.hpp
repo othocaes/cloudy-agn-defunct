@@ -157,8 +157,9 @@ std::string agn::format_eqwidth_table_slice(agn::eqwidth_table table,agn::iterat
 
 
 std::ostream& agn::operator<< (std::ostream& outstream, agn::eqwidth_table table) {
+    std::string header0_trimmed = table.header[0]; // need to setup a trim function for this
 	outstream
-		<< table.header[0]
+		<< header0_trimmed
 		<< std::endl
 		<< table.header[1]
 		<< std::endl;
@@ -222,6 +223,7 @@ agn::line_list agn::read_line_list(std::ifstream& inputfile) {
 std::list<agn::eqwidth_table> agn::compile_eqwidth_tables(agn::cloudy_grid grid,agn::line_list line_labels,double scale_factor) {
 	std::list<eqwidth_table> table_list_eq_width,table_list_radiated_energy;
 	agn::line_list::iterator line_label_it = line_labels.begin();
+    // Iterate over labels, creating table for each:
 	while (line_label_it != line_labels.end()) {
 		double x,y;
 		agn::cloudy_line_data data;
@@ -233,9 +235,8 @@ std::list<agn::eqwidth_table> agn::compile_eqwidth_tables(agn::cloudy_grid grid,
         std::stringstream header0;
         header0
             << *line_label_it
-            << "  relative to Inci 1215.00A scaled to "
-            << scale_factor
-            << "A.";
+            << " relative to Inci 1215.00A scaled to "
+            << scale_factor;
         new_table.header[0] = header0.str();
 		new_table.header[1] = "Hden   Phi(H)  Eq_Width (A)";
 		agn::cloudy_grid::iterator result_it = grid.begin();
@@ -243,12 +244,13 @@ std::list<agn::eqwidth_table> agn::compile_eqwidth_tables(agn::cloudy_grid grid,
 			x = result_it->first.first;
 			y = result_it->first.second;
 			std::string label = *line_label_it;
-			if ( result_it->second.emergent_line_intensity.count(label) == 0 ) {
+            // if no data exist under this label, initialize some:
+			if ( result_it->second.intrinsic_line_intensity.count(label) == 0 ) {
 				data.radiated_energy=-35.0;
 				data.eq_width=0.0;
 			}
 			else {
-				data = result_it->second.emergent_line_intensity[label];
+				data = result_it->second.intrinsic_line_intensity[label];
 				data.eq_width /= scale_factor;
 				if(agn::line_debug) std::cout
 					<< "Added  "

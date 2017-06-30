@@ -5,6 +5,30 @@ look at paper from kirk's student and find the value of that parameter
 copy grids from thor
 
 
+this shows only the transition between 1s and 2p... where are the rest of the contributions?
+
+if indeed cloudy is meaning to print these out individually?
+
+this may not be true for hydrogen-like iron, but for H-alpha the three transitions should be included
+
+is this just sloppy notation in output file, or is this really accurate and then where is all the rest of it?
+
+
+
+
+save species line "species_lines" all
+save species labels "species_labels" all
+
+
+OR
+
+save species labels "species_labels"
+H[:]
+end 
+
+
+
+
 
 
 2017 grids needed

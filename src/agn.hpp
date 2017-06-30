@@ -17,7 +17,7 @@
 
 namespace agn {
 
-const bool debug = false;
+const bool debug = true;
 const bool line_debug = false;
 
 // General constants
@@ -159,8 +159,8 @@ std::ostream& agn::operator<< (std::ostream& outstream, cloudy_result output) {
 		<< std::setprecision(0)
 		<< output.colden
 		<< "): "
-		<< output.emergent_line_intensity.size()
-		<< " emission lines, "
+		<< output.intrinsic_line_intensity.size()
+		<< " intrinsic emission lines, "
 		<< output.cautions.size()
 		<< " cautions present.";
 	return outstream;
@@ -363,33 +363,44 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 									eqwidthstr_len).c_str()
 							<< "\n";
 			}
-			if(point.emergent_line_intensity.count(label) == 0) {
+			if(point.intrinsic_line_intensity.count(label) == 0) {
 				data.has_duplicates = false;
-				point.emergent_line_intensity[label] = data;
+				point.intrinsic_line_intensity[label] = data;
 			}
 			else {
 				duplicate_labels.push_back(label);
-				data.has_duplicates = true;
-				point.emergent_line_intensity[label].has_duplicates = true;
+				std::stringstream zerolabel(label);
+				zerolabel << " j=0";
+				point.intrinsic_line_intensity[zerolabel.str()]
+					= point.intrinsic_line_intensity[label];
+				point.intrinsic_line_intensity[zerolabel.str()].has_duplicates = true;
+				point.intrinsic_line_intensity.erase(label);
 				int j=1;
+				data.has_duplicates = true;
 				while(true) {
 					std::stringstream newlabel;
 					newlabel << label;
 					newlabel << " j=" << j;
-					if(point.emergent_line_intensity.count(newlabel.str()) != 0) {
+					if(point.intrinsic_line_intensity.count(newlabel.str()) != 0) {
 						j++;
 						continue;
 					}
 					else {
-						point.emergent_line_intensity[newlabel.str()] = data;
+						point.intrinsic_line_intensity[newlabel.str()] = data;
 						break;
 					}
 				}
 			}
 			linetext_it++;
 		}
-		if(agn::debug) std::cout
-			<< " Grabbing footer.";
+		if(agn::debug) {
+			std::cout << " Duplicates found: ";
+			std::list<std::string>::iterator dup_it = duplicate_labels.begin();
+			while (dup_it != duplicate_labels.end() ) {
+				std::cout << *dup_it << " ";
+			}				
+			std::cout << " Grabbing footer.";
+		}
 		while (inputline == "")
 			getline(inputfile,inputline);
 		std::string footer="";
