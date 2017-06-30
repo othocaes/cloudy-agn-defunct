@@ -398,6 +398,7 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 			std::list<std::string>::iterator dup_it = duplicate_labels.begin();
 			while (dup_it != duplicate_labels.end() ) {
 				std::cout << *dup_it << " ";
+				dup_it++;
 			}				
 			std::cout << " Grabbing footer.";
 		}
