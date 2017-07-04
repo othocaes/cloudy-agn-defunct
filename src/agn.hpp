@@ -383,6 +383,13 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 					newlabel << " j=" << j;
 					if(point.intrinsic_line_intensity.count(newlabel.str()) != 0) {
 						j++;
+						// RED ALERT
+						// To ease work in summer 2017, this line sets the
+						// final instance of the emission line value
+						// to the original label, this was to get around
+						// the 3645.00A and 3647.00A being reported with
+						// different values in c17 version 1
+						point.intrinsic_line_intensity[label] = data;
 						continue;
 					}
 					else {
@@ -393,11 +400,12 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 			}
 			linetext_it++;
 		}
-		if(agn::debug) {
-			std::cout << " Duplicates found: ";
+		if(agn::debug) std::cout << " Duplicates found: " << duplicate_labels.size();
+		if(agn::line_debug) {
 			std::list<std::string>::iterator dup_it = duplicate_labels.begin();
 			while (dup_it != duplicate_labels.end() ) {
-				std::cout << *dup_it << " ";
+				std::cout << std::endl;
+				std::cout << *dup_it;
 				dup_it++;
 			}				
 			std::cout << " Grabbing footer.";
@@ -423,16 +431,6 @@ agn::cloudy_grid agn::read_cloudy_grid(std::ifstream& inputfile) {
 			<< std::endl;
 		grid[*coords] = point;
 		coords++;
-		//if(agn::debug) std::cout << "yo!";
-		//std::cout << "bye" << coords->first;
-		//if(agn::debug) std::cout
-		//	<< std::setprecision(2)
-		//	<< "Moving to "
-		//	<< coords->first
-		//	<< "x"
-		//	<< coords->second
-		//	<< " me?"
-		//	<< std::endl;
 	}
 
 	if(agn::debug) std::cout

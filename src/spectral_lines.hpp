@@ -268,6 +268,9 @@ std::list<agn::eqwidth_table> agn::compile_eqwidth_tables(agn::cloudy_grid grid,
 				if ( data.has_duplicates ) {
 					//	This needs to be expanded to catch all duplicate values j=1,2,etc.
 					// For now, just blindly use the value the program finds...
+                    // the functionality is written in the agn.hpp sections, but is not
+                    // implemented here, and as of 2017, the agn.hpp function writes the
+                    // last-encountered instance of the emission line value to the label
 				}
 			}
 			if ( data.radiated_energy < EQWIDTH_MIN_VAL_LOG || data.eq_width < EQWIDTH_MIN_VAL) {
